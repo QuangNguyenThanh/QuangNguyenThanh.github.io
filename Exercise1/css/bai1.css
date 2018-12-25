@@ -50,7 +50,7 @@ ul{
   margin-bottom: 50px;
 }
 
-ul li::before{
+li::before{
   content: url("../images/star.png");
   margin-right: 4px; 
 }
