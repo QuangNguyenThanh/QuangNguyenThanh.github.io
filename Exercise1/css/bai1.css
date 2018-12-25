@@ -1,6 +1,6 @@
 body{
   font-family: Georgia, "Times New Roman", Times, serif; 
-  font-size: 14px; 
+  font-size: 15px; 
   margin: 0px; 
 }
 
@@ -42,7 +42,7 @@ body{
 }
 
 .user_fact{
-  margin-right: 60px;
+  margin-right: 30px;
 }
 
 ul{
