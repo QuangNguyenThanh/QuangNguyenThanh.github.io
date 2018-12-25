@@ -1,6 +1,6 @@
 body{
   font-family: Georgia, "Times New Roman", Times, serif; 
-  font-size: 15px; 
+  font-size: 14px; 
   margin: 0px; 
 }
 
@@ -48,6 +48,7 @@ body{
 ul{
   list-style: none;
   margin-bottom: 50px;
+  padding-left: 50px;
 }
 
 li::before{
