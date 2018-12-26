@@ -90,6 +90,7 @@ a{
   height: 390px;
   background-color: #232227;
   position: relative;
+  margin-left: 20px;
 }
 
 .block_right hr{
