@@ -69,16 +69,22 @@ hr{
 }
 
 .comment{
-    clear: both;
-    background-color: #f9f1c2; 
-    height: 25px;
-    padding-left: 5px;
-    padding-top: 7px;
-    margin-bottom: 1px;
+    margin-top: 0px;
 }
 
 .comment_text{
     color: #0a6395;
+}
+
+ul{
+    list-style: none; 
+    padding-inline-start: 0px;
+}
+
+li{
+    background-color: #f9f1c2; 
+    margin-bottom: 1px;
+    line-height: 2.5;
 }
 
 .block--horoscopes{

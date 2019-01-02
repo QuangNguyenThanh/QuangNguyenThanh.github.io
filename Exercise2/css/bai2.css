@@ -66,14 +66,13 @@ hr{
 }
 
 .list{
-  list-style: none;
   list-style: url("../images/de2_03.png");
-  padding-inline-start: 10px;
+  padding-left: 10px;
   float: left;
 }
 
 .list--padding{
-  padding-inline-start: 30px;
+  padding-left: 30px;
 }
 
 li{
