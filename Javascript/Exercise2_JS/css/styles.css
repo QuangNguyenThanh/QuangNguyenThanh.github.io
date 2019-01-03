@@ -1,0 +1,63 @@
+body {
+  font-family: 'Times New Roman', Times, serif;
+  background-color: #F9F8F9;
+  font-size: 20px;
+}
+
+.container {
+  margin: 0 auto;
+  width: 420px;
+}
+
+table, th, td {
+  height: 10px;
+	border: 3px solid black;
+  border-collapse: collapse;
+}
+
+tr th {
+  margin: 5px;
+}
+
+th {
+  width: 60px;
+  height: 30px;
+}
+
+select {
+  width: 100%;
+  height: 100%;
+}
+
+.date {
+  width: 100px;
+  color: red;
+  background-color: #BEBEBE;
+}
+
+.day {
+  background-color: #FBFCFC;
+  font-weight: normal;
+}
+
+.not_day {
+  background-color: #2D2D2D;
+  font-weight: normal;
+}
+
+.nav {
+  background-color: #A9CCE3;
+}
+
+.text {
+  margin-bottom: 5px;
+  background-image: url("../images/calendar.png");
+  background-repeat: no-repeat;
+  background-position: right;
+  font-size: 15px;
+  height: 25px;
+}
+
+.choice-js:hover {
+  background-color: aqua;
+}
