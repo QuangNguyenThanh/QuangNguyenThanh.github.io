@@ -160,3 +160,7 @@ p{
     padding: 10px 5px 10px 10px;
     font-size: 11px;
 }
+
+a {
+    text-decoration: none;
+}
