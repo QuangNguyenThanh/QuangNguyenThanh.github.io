@@ -2,14 +2,13 @@ body{
   font-family: Georgia, 'Times New Roman', Times, serif;
   font-size: 0.6875em;
   color: #595959;
-  background-color: black;
+  background-color: #121214;
 }
 
 .container{
   margin: 0 auto;
-  background-color: #121214;
+  
   width: 930px;
-  height: 600px; 
   padding-top: 30px;
   padding-left: 70px;
 }
@@ -89,10 +88,11 @@ a{
 .block_right{
   float: left;
   width: 25%;
-  height: 390px;
+  height: auto;
   background-color: #232227;
   position: relative;
   margin-left: 20px;
+  padding-bottom: 50px;
 }
 
 .block_right hr{
