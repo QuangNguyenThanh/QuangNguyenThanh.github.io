@@ -101,17 +101,18 @@ li::before{
   font-size: 17px;
   line-height: 0.6;
   margin-bottom: 3px;
-  margin-top: 30px;
+  margin-top: 50px;
   text-align: center;
 }
 
 .form_label {
   width: 106px;
   line-height: 10px;
+  margin-right: 5px;
 }
 
 .form_textarea {
-  width: 380px;
+  width: 375px;
   height: 84px;
   line-height: 0.6;
 }
