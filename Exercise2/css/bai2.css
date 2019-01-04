@@ -8,14 +8,14 @@ body{
 .container{
   margin: 0 auto;
   background-color: #121214;
-  width: 1000px;
+  width: 930px;
   height: 600px; 
   padding-top: 30px;
   padding-left: 70px;
 }
 
 .block_left{
-  width: 43%;
+  width: 50%;
   float: left;
 }
 
@@ -41,10 +41,6 @@ body{
   margin-right: 8px;
 }
 
-.group_footer{
-  clear: left;
-}
-
 hr{
   border-color: #121214;
   background-color: #121214;
@@ -53,7 +49,7 @@ hr{
 
 .block_left hr{
   border-top: 1px dotted #595959;
-  width: 390px;
+  width: 420px;
 }
 
 .more_info img{
@@ -66,13 +62,19 @@ hr{
 }
 
 .list{
-  list-style: url("../images/de2_03.png");
-  padding-left: 10px;
+  list-style: none;
+  padding: 0px;
+  margin-bottom: 15px;
   float: left;
 }
 
-.list--padding{
-  padding-left: 30px;
+.list--padding {
+  padding-left: 20px;
+}
+
+li::before {
+  content: url("../images/de2_03.png");
+  margin-right: 2px;
 }
 
 li{
@@ -94,8 +96,8 @@ a{
 }
 
 .block_right hr{
-  border-top: 2px solid #353439;
-  width: 200px;
+  border: 1px solid #353439;
+  width: 180px;
   margin-top: 55px;
 }
 
