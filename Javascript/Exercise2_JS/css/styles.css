@@ -47,6 +47,7 @@ select {
 
 .nav {
   background-color: #A9CCE3;
+  cursor: pointer;
 }
 
 .text {
@@ -60,4 +61,5 @@ select {
 
 .choice-js:hover {
   background-color: aqua;
+  cursor: pointer;
 }
