@@ -2,6 +2,7 @@ body{
   font-family: Georgia, "Times New Roman", Times, serif; 
   font-size: 15px; 
   margin: 0px; 
+  padding-top: 5px;
 }
 
 .page{
@@ -51,9 +52,13 @@ ul{
   padding-left: 50px;
 }
 
+li {
+  margin-bottom: 7px;
+}
+
 li::before{
   content: url("../images/star.png");
-  margin-right: 4px; 
+  margin-right: 4px;
 }
 
 .comment_posted{
@@ -66,54 +71,54 @@ li::before{
   border-left: 13px solid transparent;
   border-right: 13px solid transparent;
   border-top: 12px solid #ECECEC;
-  height:0;
-  width:0;
-  top:100%;
-  left:4%;
+  height: 0;
+  width: 0;
+  top: 100%;
+  left: 4%;
   content: "";
 }
   
 .comment_content{
-  position:absolute;
+  position: absolute;
   background-color:#ECECEC;
-  width:475px; 
-  padding-top:5px;
-  padding-bottom:5px;
-  line-height:1.07;
-  margin-left:2px;
-  padding-left:20px;
+  width: 475px; 
+  padding-top: 5px;
+  padding-bottom: 5px;
+  line-height: 1.07;
+  margin-left: 2px;
+  padding-left: 20px;
 }
   
 .comment_detail{
-  position:absolute;
-  top:44px;
-  left:55px;
-  font-size:13px;
-  line-height:1.23;
+  position: absolute;
+  top: 44px;
+  left: 55px;
+  font-size: 13px;
+  line-height: 1.23;
 }
 
 .form_title{
-  font-size:17px;
-  line-height:0.6;
-  margin-bottom:3px;
-  margin-top:30px;
-  text-align:center;
+  font-size: 17px;
+  line-height: 0.6;
+  margin-bottom: 3px;
+  margin-top: 30px;
+  text-align: center;
 }
 
 .form_label {
   width: 106px;
-  line-height:10px;
+  line-height: 10px;
 }
 
 .form_textarea {
   width: 380px;
-  height:84px;
-  line-height:0.6;
+  height: 84px;
+  line-height: 0.6;
 }
 
 .row{
-  margin-top:3px;	
-  margin-left:5px;
+  margin-top: 3px;	
+  margin-left: 5px;
   display: flex;
   align-items: center;
 }
