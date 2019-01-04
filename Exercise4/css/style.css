@@ -1,16 +1,15 @@
 body{
     font-family: Arial, Helvetica, sans-serif;
     font-size: 13px;
-    /* margin: 10px; */
     line-height: 1;
 }
 
 .container{
     margin: 0 auto;
     width: 296px;
-    height: 720px;
+
     background-color: #e6f3fb;
-    padding: 3px 10px 0px 10px;
+    padding: 3px 10px 10px 10px;
 }
 
 .title{
@@ -71,6 +70,7 @@ hr{
 
 .comment{
     margin-top: 0px;
+    background-color: white;
 }
 
 .comment_text{
@@ -85,6 +85,7 @@ ul{
 li{
     background-color: #f9f1c2; 
     margin-bottom: 1px;
+    padding-left: 13px;
     line-height: 2.5;
 }
 
@@ -149,6 +150,7 @@ p{
 
 .block--competions hr{
     border-top: 1px solid #595959;
+    margin-bottom: 3px;
 }
 
 .content--decor{
@@ -156,4 +158,5 @@ p{
     color: #4d5d73;
     line-height: 1.2;
     padding: 10px 5px 10px 10px;
+    font-size: 11px;
 }
