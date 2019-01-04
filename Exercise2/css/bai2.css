@@ -30,10 +30,14 @@ body{
   color: white; 
 }
 
+.content {
+  line-height: 1;
+}
+
 .group_image{
   float: left;
   margin-right: 30px;
-  margin-bottom: 70px;
+  margin-bottom: 40px;
 }
 
 .group_info{
