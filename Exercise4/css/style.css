@@ -83,6 +83,11 @@ ul{
     padding-left: 0;
 }
 
+.read_more {
+    color: #0a6395;
+    text-decoration: underline;
+}
+
 li{
     background-color: #f9f1c2; 
     margin-bottom: 1px;
