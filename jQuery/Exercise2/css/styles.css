@@ -1,0 +1,48 @@
+.container {
+    width: 950px;
+    height: 598px;
+    background-image: url("../images/bg_itm_lineup.jpg");
+    background-repeat: no-repeat;
+    margin: 0 auto;
+    padding-top: 100px;
+}
+
+.slideshow {
+    width: 648px;
+    height: 339px;
+    position: relative;
+    overflow: hidden;
+    list-style: none;
+    float: left;
+    padding-left: 0;
+    margin-left: 50px;
+    margin-top: 0;
+}
+
+.nav {
+    clear: both;
+    margin-left: 150px;
+    list-style: none;
+}
+
+.nav li {
+    float: left;
+}
+
+.items {
+    display: none;
+    position: absolute;
+}
+
+
+#arrowleft {
+    float: left;
+    margin-top: 150px;
+    margin-left: 50px;
+}
+
+#arrowright {
+    float: right;
+    margin-top: 150px;
+    margin-right: 50px;
+}
