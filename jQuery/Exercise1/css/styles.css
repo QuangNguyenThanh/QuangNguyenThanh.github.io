@@ -20,9 +20,6 @@ ul {
 
 .hidden {
     display: none;
-}
-
-.hiddentext {
     border: 1px solid #D5CFC0;
     width: 267px;
     height: auto;
