@@ -17,8 +17,6 @@ function Canvas() {
     var myBarChart = new BarChart(
         {
             ctx,
-            centerY: 1000,
-            radius: 100,
             title: title,
             canvas: canvas,
             data: data,

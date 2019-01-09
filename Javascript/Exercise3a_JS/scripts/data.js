@@ -1,4 +1,4 @@
-window.onload = eventWindowLoaded;
+﻿window.onload = eventWindowLoaded;
 function eventWindowLoaded() {
     Canvas();
 }

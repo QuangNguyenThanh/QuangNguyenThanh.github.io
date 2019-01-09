@@ -1,0 +1,53 @@
+body {
+    height: auto;
+}
+
+.container {
+    margin: 0 auto;
+    width: 341px;
+    height: auto;
+}
+
+ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.about {
+    display: flex;
+    margin: 0 auto;
+}
+
+.hidden {
+    display: none;
+}
+
+.hiddentext {
+    border: 1px solid #D5CFC0;
+    width: 267px;
+    height: auto;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.popup {
+    display: none;
+    position: absolute;
+    background-color: white;
+    border: 2px solid #AB9E62;
+    border-radius: 5px;
+    width: 339px;
+    height: auto;
+    top: -150px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.image_popup {
+    width: 300px;
+}
+
+.buttonclose {
+    position: absolute;
+    top: -25px;
+}

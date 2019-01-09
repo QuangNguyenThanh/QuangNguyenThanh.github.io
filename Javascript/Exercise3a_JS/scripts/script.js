@@ -14,13 +14,14 @@ var Piechart = function (options) {
     var title = options.title;
 
     var scale = 0.3;
-    var slice_Height = 250;
-    var fixX = 10;
+    var slice_Height = 250; //sum of slice draw
+    //fix center position
+    var fixX = 10; 
     var fixY = -10;
 
     var check = myrate.success >= myrate.fail ? true : false;
-    var lineSuccess = [300, 100, 200, 100];
-    var lineFail = [800, 100, 900, 100];
+    var lineSuccess = [300, 100, 200, 100]; //position draw line success
+    var lineFail = [800, 100, 900, 100]; //position draw line fail
 
     if (!check) {
         fixX = -fixX;
@@ -31,6 +32,7 @@ var Piechart = function (options) {
     
     ctx.scale(1, scale);
 
+    //Draw success and fail part
     this.drawChart = function(i) {
         if (i < slice_Height) {
             ctx.fillStyle = color.botSuccess;
@@ -56,6 +58,7 @@ var Piechart = function (options) {
         ctx.closePath();
     }
 
+    //Draw title of chart
     this.drawTitle = function() {
         ctx.scale(1, 3);
         ctx.restore();
@@ -69,6 +72,7 @@ var Piechart = function (options) {
     this.drawLineSuccess = function() {
         var moveX, moveY;
         var angle = myrate.success * 100 * 3.6;
+        //Find position begin draw line
         if (myrate.success <= 0.25) {
             moveX = centerX + 200 - angle;
             moveY = (centerY - slice_Height + angle) / 3;
@@ -92,6 +96,7 @@ var Piechart = function (options) {
     this.drawLineFail = function() {
         var moveX, moveY;
         var angle = myrate.fail * 100 * 3.6;
+        //Find position begin draw line
         if (myrate.fail <= 0.25) {
             moveX = centerX + fixX + 200 - angle;
             moveY = (centerY + fixY - slice_Height - angle) / 3;

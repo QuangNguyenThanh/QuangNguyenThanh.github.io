@@ -1,23 +1,23 @@
 var BarChart = function(options) {
     this.options = options;
-    //y center
-    var centerY = options.centerY;
-    //radius
-    var radius = options.radius;
     //color
     var color = options.color;
+    //context
     var ctx = options.ctx;
+    //titles
     var title = options.title;
+    //data
     var data = options.data;
     var nameData = options.nameData;
     var scale = 0.6;
+    //Find max data
     var maxData = findMax(data);
-
+    //position y of main line
     const MAIN_LINE_POSITION_Y = 600;
 
     //get width chart
     var width = data.length * 100 + (data.length - 1) * 50;
-
+    //find position begin draw chart
     var startX = (1000 - width * scale) / 2 + 100;
     var endX = startX + width + 100;
     ctx.scale(scale, scale);
