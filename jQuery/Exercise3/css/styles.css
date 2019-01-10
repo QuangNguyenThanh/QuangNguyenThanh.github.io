@@ -1,0 +1,25 @@
+body {
+    
+}
+
+.bgleft {
+    float: left;
+}
+
+.bgright {
+    float: right;
+    left: 1000px;
+}
+
+img {
+    position: absolute;
+}
+
+.container {
+    height: 600px;
+    width: 1200px;
+    overflow: hidden;
+    position: relative;
+    margin: 0 auto;
+    background-color: #f3d6b3;
+}
