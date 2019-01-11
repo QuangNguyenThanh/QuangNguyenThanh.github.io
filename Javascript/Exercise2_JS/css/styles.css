@@ -13,13 +13,10 @@ table, th, td {
   height: 10px;
 	border: 3px solid black;
   border-collapse: collapse;
+  text-align: center;
 }
 
-tr th {
-  margin: 5px;
-}
-
-th {
+th, td{
   width: 60px;
   height: 30px;
 }
