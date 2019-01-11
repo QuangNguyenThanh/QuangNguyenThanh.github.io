@@ -13,7 +13,7 @@ function Canvas() {
         topFail: "#FF6464",
         botFail: "#E4322B"
     };
-    var canvas = document.getElementById('myCanvas');
+    var canvas = document.getElementById('myCanvas-js');
     var ctx = canvas.getContext("2d");
     var myPiechart = new Piechart(
             {
