@@ -25,7 +25,7 @@ function addProduct() {
             return;
         }
     }
-
+    document.getElementById("product_name-js").value = "";
     //create node
     var index = document.createElement("p");
     index.setAttribute("class", "index-js");
@@ -51,6 +51,7 @@ function addProduct() {
             parentDelete.children[i].children[0].innerHTML = i + 1;
         }
     }
+    
     
     //add product to list
     parent.appendChild(index);
