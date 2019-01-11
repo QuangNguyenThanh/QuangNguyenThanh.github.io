@@ -51,8 +51,6 @@ function addProduct() {
             parentDelete.children[i].children[0].innerHTML = i + 1;
         }
     }
-    
-    
     //add product to list
     parent.appendChild(index);
     parent.appendChild(x);

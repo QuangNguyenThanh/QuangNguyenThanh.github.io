@@ -1,0 +1,34 @@
+body {
+    margin: 0;
+}
+
+.container {
+    position: relative;
+    overflow: hidden;
+    width: 997px;
+    background-image: url("../images/tail.jpg");
+    height: 662px;
+    margin: 0 auto;
+}
+
+.layer {
+    width: 997px;
+    height: 328px;
+    margin-top: 56px;
+}
+
+.layer img {
+    position: absolute;
+    top: 56px;
+}
+
+#headerlayer {
+    top: 56px;
+}
+
+#layer-1 {
+    width: 800px;
+    top: 151px;
+    left: 100px;
+}
+
