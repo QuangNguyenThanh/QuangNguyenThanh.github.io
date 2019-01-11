@@ -1,5 +1,5 @@
 var check = false;
-
+//Create Calendar
 function createTable() {
     if (!check) {
         var container = document.getElementById("container");
@@ -23,19 +23,19 @@ function createTable() {
                 var cell = document.createElement("th");
                 cell.setAttribute("id", "cell" + (i * 7 + j));
                 if (i === 0 && j < firstDay) {
-                    cell.setAttribute("class", "not_day");                
+                    cell.setAttribute("class", "not_day-js");                
                     row.appendChild(cell);
                     continue;
                 }
                 if (count <= dayOfMonth) {
-                    cell.setAttribute("class", "day");
+                    cell.setAttribute("class", "day-js");
                     cell.classList.add("choice-js");
                     cell.innerHTML = count;
                     cell.onclick = function() {choiceDay(this.innerHTML)};
                     count++;       
                 }
                 else {
-                    cell.setAttribute("class", "not_day");
+                    cell.setAttribute("class", "not_day-js");
                 }
                 row.appendChild(cell);  
             }
@@ -44,8 +44,8 @@ function createTable() {
     
         container.appendChild(table);
     
-        var month = document.getElementById("month");
-        var year = document.getElementById("year");
+        var month = document.getElementById("month-js");
+        var year = document.getElementById("year-js");
         updateMonth(month, today);
         updateYear(year, today);
     
@@ -56,12 +56,12 @@ function createTable() {
                     year.options[year.selectedIndex].value));
         }
     
-        var preMonth = document.getElementById("preMonth");
-        var preYear = document.getElementById("preYear");
-        var nextMonth = document.getElementById("nextMonth");
-        var nextYear = document.getElementById("nextYear");
+        var preMonth = document.getElementById("preMonth-js");
+        var preYear = document.getElementById("preYear-js");
+        var nextMonth = document.getElementById("nextMonth-js");
+        var nextYear = document.getElementById("nextYear-js");
         check = true;
-
+        //set event click previous month
         preMonth.onclick = function() {
             selectCbo(year.options[year.selectedIndex].value, 
                 parseInt(month.options[month.selectedIndex].value) - 1, 
@@ -74,7 +74,7 @@ function createTable() {
             updateMonth(month, newDate);
             updateYear(year, newDate);
         }
-
+        //set event click previous year
         preYear.onclick = function() {
             selectCbo(parseInt(year.options[year.selectedIndex].value) - 1, 
                 month.options[month.selectedIndex].value, 
@@ -86,7 +86,7 @@ function createTable() {
              1);
             updateYear(year, newDate);
         }
-
+        //set event click next month
         nextMonth.onclick = function() {
             selectCbo(year.options[year.selectedIndex].value, 
                 parseInt(month.options[month.selectedIndex].value) + 1, 
@@ -99,7 +99,7 @@ function createTable() {
             updateMonth(month, newDate);
             updateYear(year, newDate);
         }
-
+        //set event click next year
         nextYear.onclick = function() {
             selectCbo(parseInt(year.options[year.selectedIndex].value) + 1, 
                 month.options[month.selectedIndex].value, 
@@ -114,27 +114,27 @@ function createTable() {
 
     }
 }
-
+//Get day choice in calendar and show in text box
 function choiceDay(day) {
     if (day == "")
         return;
-    var month = document.getElementById("month");
-    var year = document.getElementById("year");
+    var month = document.getElementById("month-js");
+    var year = document.getElementById("year-js");
     var m = month.options[month.selectedIndex].value;
     var y = year.options[year.selectedIndex].value;
 
-    document.getElementById("calendar").value = day.padStart(2, '0') + "/" + (parseInt(m) + 1 + "").padStart(2, '0') + "/" + y;
+    document.getElementById("calendar-js").value = day.padStart(2, '0') + "/" + (parseInt(m) + 1 + "").padStart(2, '0') + "/" + y;
 
     var container = document.getElementById("container");
     var table = document.getElementById("table");
     container.removeChild(table);
     check = false;
 }
-
+//Get days in month
 function daysInMonth(iMonth, iYear) {
     return 32 - new Date(iYear, iMonth, 32).getDate();
 }
-
+//Choice in select
 function selectCbo(year, month, dayOfMonth) {
     var date = new Date();
     date.setFullYear(year, month, 1);
@@ -147,12 +147,12 @@ function selectCbo(year, month, dayOfMonth) {
             var cell = document.getElementById("cell" + (i * 7 + j));
 
             if ((i * 7 + j) < firstDay) {
-                cell.setAttribute("class", "not_day");                
+                cell.setAttribute("class", "not_day-js");                
                 cell.innerHTML = "";
                 continue;
             }
             if (count <= dayOfMonth) {
-                cell.setAttribute("class", "day");
+                cell.setAttribute("class", "day-js");
                 cell.classList.add("choice-js");
                 cell.innerHTML = count;
                 cell.onclick = function() {choiceDay(this.innerHTML)};
@@ -160,20 +160,20 @@ function selectCbo(year, month, dayOfMonth) {
             }
             else {
                 cell.innerHTML = "";
-                cell.setAttribute("class", "not_day");
+                cell.setAttribute("class", "not_day-js");
             }
         }
     }
 }
-
+//Update select item in combobox year
 function updateYear(year, date) {
     year.getElementsByTagName("option")[date.getFullYear() - 1900].selected = "selected";
 }
-
+//Update select item in combobox month
 function updateMonth(month, date) {
     month.getElementsByTagName("option")[date.getMonth()].selected = "selected";
 }
-
+//Create Date part in calendar
 function createRowDate(table) {
     var rowDate = document.createElement("tr");
     var i;
@@ -181,28 +181,28 @@ function createRowDate(table) {
 
     for (i = 0; i < 7; i++) {
         var cellDate = document.createElement("th");
-        cellDate.setAttribute("class", "date");
+        cellDate.setAttribute("class", "date-js");
         cellDate.innerHTML = day[i];
         rowDate.appendChild(cellDate);
     }
     table.appendChild(rowDate);
 }
-
+//Create Nav part in calendar
 function createNav(table) {
     var rowNav = document.createElement("tr");
-    rowNav.setAttribute("class", "nav");
+    rowNav.setAttribute("class", "nav-js");
 
     var preYear = document.createElement("th");
-    preYear.setAttribute("id", "preYear");
+    preYear.setAttribute("id", "preYear-js");
     var preMonth = document.createElement("th");
-    preMonth.setAttribute("id", "preMonth");
+    preMonth.setAttribute("id", "preMonth-js");
     var cboMonth = document.createElement("th");
     cboMonth.setAttribute("colspan", 2);
     var cboYear = document.createElement("th");
     var nextMonth = document.createElement("th");
-    nextMonth.setAttribute("id", "nextMonth");
+    nextMonth.setAttribute("id", "nextMonth-js");
     var nextYear = document.createElement("th");
-    nextYear.setAttribute("id", "nextYear");
+    nextYear.setAttribute("id", "nextYear-js");
 
     preYear.innerHTML = "<<";
     preMonth.innerHTML = "<";
@@ -212,7 +212,7 @@ function createNav(table) {
     var i;
     var month = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
     var cboM = document.createElement("select");
-    cboM.setAttribute("id", "month");
+    cboM.setAttribute("id", "month-js");
     for (i = 0; i < 12; i++) {
         var t = document.createElement("option");
         t.setAttribute("value", i);
@@ -221,7 +221,7 @@ function createNav(table) {
     }
 
     var cboY = document.createElement("select");
-    cboY.setAttribute("id", "year");
+    cboY.setAttribute("id", "year-js");
     for (i = 1900; i < 2100; i++) {
         var t = document.createElement("option");
         t.setAttribute("value", i);

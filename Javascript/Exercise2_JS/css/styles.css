@@ -29,23 +29,23 @@ select {
   height: 100%;
 }
 
-.date {
+.date-js {
   width: 100px;
   color: red;
   background-color: #BEBEBE;
 }
 
-.day {
+.day-js {
   background-color: #FBFCFC;
   font-weight: normal;
 }
 
-.not_day {
+.not_day-js {
   background-color: #2D2D2D;
   font-weight: normal;
 }
 
-.nav {
+.nav-js {
   background-color: #A9CCE3;
   cursor: pointer;
 }
