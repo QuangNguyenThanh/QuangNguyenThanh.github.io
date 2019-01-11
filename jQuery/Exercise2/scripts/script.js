@@ -4,7 +4,7 @@ var opac = 0.5;
 var interval;
 var timer = function(){
     interval = setInterval(function() {
-        $("#arrowright").click();
+        $("#arrowright-js").click();
     }, 5000);;
 }
 var countSlide;
@@ -29,7 +29,7 @@ function WindowEventLoaded() {
 //set click event
 $(document).ready(function() {
     //click arrow left
-    $("#arrowleft").click(function(){
+    $("#arrowleft-js").click(function(){
         setAnimateOpacity("#item_nav-", index, 1);
         index--;
         if (index < 1) {
@@ -43,7 +43,7 @@ $(document).ready(function() {
         timer();
     });
     //click arrow right
-    $("#arrowright").click(function(){
+    $("#arrowright-js").click(function(){
         setAnimateOpacity("#item_nav-", index, 1);
         index++;
         if (index > countSlide) {

@@ -35,13 +35,13 @@
 }
 
 
-#arrowleft {
+#arrowleft-js {
     float: left;
     margin-top: 150px;
     margin-left: 50px;
 }
 
-#arrowright {
+#arrowright-js {
     float: right;
     margin-top: 150px;
     margin-right: 50px;
