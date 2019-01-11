@@ -2,6 +2,7 @@ var locate = 0;
 var delay = 1000;
 var isPopup = false;
 $(document).ready(function(){
+    //Event click in menu
     $(".about").click(function() {
         if (!isPopup) {
             var about = $(this).attr("id");
@@ -32,9 +33,7 @@ $(document).ready(function(){
             }
         }
     });
-});
-
-$(document).ready(function() {
+    //Event click button in content
     $(".button").click(function() {
         var btn = $(this).attr("id");
         var index = btn.split("-");
@@ -47,9 +46,7 @@ $(document).ready(function() {
             top: "+=190px"
         }, "slow");
     });
-});
-
-$(document).ready(function() {
+    //Event close popup
     $(".buttonclose").click(function() {
         var parent = $(this).parent();
         $(parent).hide();
