@@ -1,3 +1,11 @@
+var lineSuccess = [300, 100, 200, 100]; //position draw line success
+var lineFail = [800, 100, 900, 100]; //position draw line fail
+var scale = 0.3;
+var slice_Height = 250; //sum of slice draw
+//fix center position
+var fixX = 10; 
+var fixY = -10;
+
 var Piechart = function (options) {
     this.options = options;
     // x,y center of Pie
@@ -8,30 +16,19 @@ var Piechart = function (options) {
     //color of pie,text...
     var color = options.colors;
     var ctx = options.ctx;
+    ctx.scale(1, scale);
     //data rate
     var myrate = options.data;
     //tilte
     var title = options.title;
 
-    var scale = 0.3;
-    var slice_Height = 250; //sum of slice draw
-    //fix center position
-    var fixX = 10; 
-    var fixY = -10;
-
     var check = myrate.success >= myrate.fail ? true : false;
-    var lineSuccess = [300, 100, 200, 100]; //position draw line success
-    var lineFail = [800, 100, 900, 100]; //position draw line fail
-
     if (!check) {
         fixX = -fixX;
         var t = lineSuccess;
         lineSuccess = lineFail;
         lineFail = t;
-    }
-    
-    ctx.scale(1, scale);
-
+    } 
     //Draw success and fail part
     this.drawChart = function(i) {
         if (i < slice_Height) {
@@ -69,6 +66,7 @@ var Piechart = function (options) {
         ctx.stroke();
     }
 
+    //Draw lines chart
     this.drawLineSuccess = function() {
         var moveX, moveY;
         var angle = myrate.success * 100 * 3.6;
@@ -92,7 +90,6 @@ var Piechart = function (options) {
         ctx.strokeStyle = color.botSuccess;
         ctx.stroke();
     }
-
     this.drawLineFail = function() {
         var moveX, moveY;
         var angle = myrate.fail * 100 * 3.6;
@@ -117,6 +114,7 @@ var Piechart = function (options) {
         ctx.stroke();
     }
 
+    //Draw text of chart
     this.drawText = function() {
         ctx.beginPath();
         ctx.font = "14px Arial";

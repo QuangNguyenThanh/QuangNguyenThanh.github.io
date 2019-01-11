@@ -25,6 +25,7 @@ function addProduct() {
             return;
         }
     }
+    //remove text in text box
     document.getElementById("product_name-js").value = "";
     //create node
     var index = document.createElement("p");
@@ -45,7 +46,6 @@ function addProduct() {
         var parentDelete = deleted.parentNode;
         parentDelete.removeChild(deleted);
         var dir = deleted.children[0].innerHTML;
-
         //set index
         for (i = dir - 1; i < parentDelete.children.length; i++) {
             parentDelete.children[i].children[0].innerHTML = i + 1;

@@ -7,13 +7,12 @@ $(document).ready(function(){
         if (!isPopup) {
             var about = $(this).attr("id");
             var src = $(this).attr("src");
-            var arr = about.split("-");
+            var index = about.split("-");
+            src = src === "images/about" + index[1] + "_mb.jpg" ?
+            "images/about" + index[1] + "_mb_hover.jpg" : "images/about" + index[1] + "_mb.jpg";
     
-            src = src === "images/about" + arr[1] + "_mb.jpg" ?
-            "images/about" + arr[1] + "_mb_hover.jpg" : "images/about" + arr[1] + "_mb.jpg";
-    
-            if (locate == arr[1]) {
-                $('#hidden-' + arr[1]).animate( {
+            if (locate == index[1]) {
+                $('#hidden-' + index[1]).animate( {
                     height: "toggle"
                 });
                 $(this).attr("src", src);
@@ -24,10 +23,10 @@ $(document).ready(function(){
                 srcPre = srcPre === "images/about" + locate + "_mb.jpg" ?
                 "images/about" + locate + "_mb_hover.jpg" : "images/about" + locate + "_mb.jpg";
                 $("#about-" + locate).attr("src", srcPre);
-                locate = arr[1];
+                locate = index[1];
                 $(this).attr("src", src);
                 $(".hidden").hide();
-                $('#hidden-' + arr[1]).animate( {
+                $('#hidden-' + index[1]).animate( {
                     height: "toggle"
                 });
             }

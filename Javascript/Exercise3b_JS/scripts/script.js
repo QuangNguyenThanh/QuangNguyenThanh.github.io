@@ -1,3 +1,7 @@
+var scale = 0.6;
+//position y of main line
+const MAIN_LINE_POSITION_Y = 600;
+
 var BarChart = function(options) {
     this.options = options;
     //color
@@ -9,11 +13,8 @@ var BarChart = function(options) {
     //data
     var data = options.data;
     var nameData = options.nameData;
-    var scale = 0.6;
     //Find max data
     var maxData = findMax(data);
-    //position y of main line
-    const MAIN_LINE_POSITION_Y = 600;
 
     //get width chart
     var width = data.length * 100 + (data.length - 1) * 50;
@@ -22,6 +23,7 @@ var BarChart = function(options) {
     var endX = startX + width + 100;
     ctx.scale(scale, scale);
 
+    //Draw title of chart
     this.drawTitle = function() {
         ctx.beginPath();
         ctx.font = "40px Arial";
@@ -30,7 +32,7 @@ var BarChart = function(options) {
         ctx.lineWidth = 5;
         ctx.stroke();
     }
-
+    //Draw lines
     this.drawMainLine = function() {
         ctx.beginPath();
         ctx.moveTo(startX, MAIN_LINE_POSITION_Y);
@@ -42,7 +44,6 @@ var BarChart = function(options) {
         ctx.fillText("0", startX - 60, MAIN_LINE_POSITION_Y + 10);
         ctx.closePath();
     }
-
     this.drawLines = function() {
         ctx.beginPath();
         ctx.lineWidth = 1;
@@ -58,7 +59,7 @@ var BarChart = function(options) {
         }
         ctx.closePath();
     }
-
+    //Draw columns of chart
     this.drawColumns = function() {
         ctx.restore();
         ctx.beginPath();
@@ -80,7 +81,7 @@ var BarChart = function(options) {
         }
         ctx.closePath();
     }
-
+    //Draw text of chart
     this.drawText = function() {
         ctx.beginPath();
         ctx.fillStyle = "gray";
@@ -105,7 +106,7 @@ var BarChart = function(options) {
         this.drawText();
     }
 }
-
+//Find max value of data input
 function findMax(data) {
     var i;
     var max = data[0];

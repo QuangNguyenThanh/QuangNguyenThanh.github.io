@@ -25,7 +25,6 @@ function WindowEventLoaded() {
     }
     timer();
 }
-
 //set click event
 $(document).ready(function() {
     //click arrow left
