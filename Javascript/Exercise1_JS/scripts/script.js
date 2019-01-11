@@ -1,6 +1,6 @@
 function addProduct() {
     //get input
-    var name = document.getElementById("product_name").value;
+    var name = document.getElementById("product_name-js").value;
 
     //check length input
     if (name.trim().length == 0) {
@@ -12,9 +12,9 @@ function addProduct() {
         return;
     }
 
-    var list_product = document.getElementById("list_product");
+    var list_product = document.getElementById("list_product-js");
     var parent = document.createElement("div");
-    parent.setAttribute("class", "node");
+    parent.setAttribute("class", "node-js");
 
     //check available
     var chil = list_product.children;
@@ -28,16 +28,16 @@ function addProduct() {
 
     //create node
     var index = document.createElement("p");
-    index.setAttribute("class", "index");
+    index.setAttribute("class", "index-js");
     index.innerHTML =  chil.length + 1;
 
     var x = document.createElement("p");
-    x.setAttribute("id", "product");
-    x.setAttribute("class", "product");
+    x.setAttribute("id", "product-js");
+    x.setAttribute("class", "product-js");
     x.innerHTML = name;
 
     var close = document.createElement("img");
-    close.setAttribute("class", "close");
+    close.setAttribute("class", "close-js");
     close.setAttribute("src", "images/close.png");
     //set event click button delete
     close.onclick = function() {
