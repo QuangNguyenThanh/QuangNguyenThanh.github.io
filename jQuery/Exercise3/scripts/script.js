@@ -1,6 +1,7 @@
 var filename = "leaves";
 var formatfile = ".png";
 var index = 0;
+var delay = 800;
 
 setInterval(function(){
     //random image
@@ -31,4 +32,4 @@ setInterval(function(){
     TweenMax.to(leaf,
     falltime,
     {rotation: rotate * angle, rotationY: rotate * angle});
-}, 800);
+}, delay);

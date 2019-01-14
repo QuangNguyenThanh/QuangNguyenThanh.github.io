@@ -2,10 +2,11 @@ var index = 1;
 var width = 648;
 var opac = 0.5;
 var interval;
+var autoSlide = 5000;
 var timer = function(){
     interval = setInterval(function() {
         $("#arrowright-js").click();
-    }, 5000);;
+    }, autoSlide);;
 }
 var countSlide;
 //window load
