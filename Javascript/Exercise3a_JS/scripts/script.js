@@ -19,6 +19,8 @@ var Piechart = function (options) {
     ctx.scale(1, scale);
     //data rate
     var myrate = options.data;
+    //font
+    var font = options.font;
     //tilte
     var title = options.title;
 
@@ -58,9 +60,8 @@ var Piechart = function (options) {
     //Draw title of chart
     this.drawTitle = function() {
         ctx.scale(1, 3);
-        ctx.restore();
         ctx.beginPath();
-        ctx.font = "20px Arial";
+        ctx.font = font.large;
         ctx.fillStyle = "blue";
         ctx.fillText(title, 400, 500);
         ctx.stroke();
@@ -81,7 +82,6 @@ var Piechart = function (options) {
             moveX = centerX - (angle - 180) / 2;
             moveY = (centerY - slice_Height + 100) / 3;  
         }
-        ctx.restore();
         ctx.beginPath();
         ctx.moveTo(moveX, moveY);
         ctx.lineTo(lineSuccess[0], lineSuccess[1]);
@@ -104,7 +104,6 @@ var Piechart = function (options) {
             moveX = centerX + fixX - (angle - 180) / 2;
             moveY = (centerY + fixY - slice_Height - 100) / 3;
         }
-        ctx.restore();
         ctx.beginPath();
         ctx.moveTo(moveX, moveY);
         ctx.lineTo(lineFail[0], lineFail[1]);
@@ -117,7 +116,7 @@ var Piechart = function (options) {
     //Draw text of chart
     this.drawText = function() {
         ctx.beginPath();
-        ctx.font = "14px Arial";
+        ctx.font = font.normal;
         ctx.fillStyle = "black";
         if (!check) {
             ctx.fillText(myrate.success * 100 + "% ĐÃ ĐẠT", lineSuccess[0], lineSuccess[3] - 10);

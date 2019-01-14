@@ -13,6 +13,8 @@ var BarChart = function(options) {
     //data
     var data = options.data;
     var nameData = options.nameData;
+    //font
+    var font = options.font;
     //Find max data
     var maxData = findMax(data);
 
@@ -26,7 +28,7 @@ var BarChart = function(options) {
     //Draw title of chart
     this.drawTitle = function() {
         ctx.beginPath();
-        ctx.font = "40px Arial";
+        ctx.font = font.large;
         ctx.fillStyle = "black";
         ctx.fillText(title.titleTop, startX + 20 + (width - 700) / 2, 100);
         ctx.lineWidth = 5;
@@ -38,7 +40,7 @@ var BarChart = function(options) {
         ctx.moveTo(startX, MAIN_LINE_POSITION_Y);
         ctx.lineTo(startX + width + 100, MAIN_LINE_POSITION_Y);
         ctx.fillStyle = "black";
-        ctx.font = "30px Arial";
+        ctx.font = font.normal;
         ctx.lineWidth = 3;
         ctx.stroke();
         ctx.fillText("0", startX - 60, MAIN_LINE_POSITION_Y + 10);
@@ -74,7 +76,7 @@ var BarChart = function(options) {
         ctx.fillRect(moveX + 100 + 30, 200, 100, 30);
         moveX = startX + 40;
         ctx.fillStyle = "black";
-        ctx.font = "30px Arial";
+        ctx.font = font.normal;
         for (i = 0; i < data.length; i++) {
             ctx.fillText(nameData[i], moveX, MAIN_LINE_POSITION_Y + 50);
             moveX += 150;
@@ -85,10 +87,10 @@ var BarChart = function(options) {
     this.drawText = function() {
         ctx.beginPath();
         ctx.fillStyle = "gray";
-        ctx.font = "italic 30px Arial";
+        ctx.font = font.italic;
         ctx.fillText(title.titleBot, 700, MAIN_LINE_POSITION_Y + 150);
         ctx.fillStyle = "black";
-        ctx.font = "30px Arial";
+        ctx.font = font.normal;
         var textright = title.titleLeftRight.split(" ");
         var i;
         for (i = 0; i < textright.length; i++) {
@@ -98,6 +100,7 @@ var BarChart = function(options) {
         ctx.rotate(-Math.PI / 2);
         ctx.textAlign = "center";
         ctx.fillText(title.titleLeftRight, 200, 200);
+        ctx.closePath();
     }
 
     this.draw = function() {

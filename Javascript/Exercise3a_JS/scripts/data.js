@@ -13,6 +13,10 @@ function Canvas() {
         topFail: "#FF6464",
         botFail: "#E4322B"
     };
+    var font = {
+        large: "20px Arial",
+        normal: "14px Arial"
+    }
     var canvas = document.getElementById('myCanvas-js');
     var ctx = canvas.getContext("2d");
     var myPiechart = new Piechart(
@@ -24,6 +28,7 @@ function Canvas() {
                 title: " BIỂU ĐỒ TỔNG QUAN KHUNG NĂNG LỰC",
                 canvas: canvas,
                 data: myRate,
+                font: font,
                 colors: color
             }
     );

@@ -11,6 +11,11 @@ function Canvas() {
         titleLeftRight: "LEVEL OF POSITION",
         titleBot: "TÊN DỰ ÁN"
     }
+    var font = {
+        large: "40px Arial",
+        normal: "30px Arial",
+        italic: "italic 30px Arial"
+    }
     var color = "#3366CC";
     var canvas = document.getElementById("myCanvas");
     var ctx = canvas.getContext("2d");
@@ -20,6 +25,7 @@ function Canvas() {
             title: title,
             canvas: canvas,
             data: data,
+            font: font,
             nameData: nameData,
             color: color
         }   
