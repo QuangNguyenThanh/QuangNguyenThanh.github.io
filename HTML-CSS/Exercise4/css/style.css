@@ -7,7 +7,6 @@ body{
 .container{
     margin: 0 auto;
     width: 296px;
-
     background-color: #e6f3fb;
     padding: 3px 10px 10px 10px;
 }
@@ -29,10 +28,6 @@ hr{
 .content{
     background-color: white; 
     overflow: hidden;
-}
-
-.block--blogroll {
-    height: 220px;
 }
 
 .content img{
@@ -81,6 +76,7 @@ hr{
 ul{
     list-style: none; 
     padding-left: 0;
+    margin-bottom: 0;
 }
 
 .read__more {
@@ -93,10 +89,6 @@ li{
     margin-bottom: 1px;
     padding-left: 13px;
     line-height: 2.5;
-}
-
-.block--horoscopes{
-    height: 220px;
 }
 
 .block--horoscopes img{
@@ -132,13 +124,12 @@ p{
 }
 
 .note p{
-    padding-left: 10px;
+    padding-left: 20px;
     padding-top: 10px;
 }
 
 .block--get__news{
-    height: 113px;
-    margin-top: 20px;
+    margin-top: 15px;
 }
 
 .block--get__news img{
@@ -155,7 +146,7 @@ p{
 }
 
 .block--competions{
-    margin-top: 30px;
+    margin-top: 10px;
 }
 
 .block--competions hr{
