@@ -71,8 +71,6 @@ li::before{
   border-left: 13px solid transparent;
   border-right: 13px solid transparent;
   border-top: 12px solid #ECECEC;
-  height: 0;
-  width: 0;
   top: 100%;
   left: 4%;
   content: "";
@@ -88,6 +86,11 @@ li::before{
   margin-left: 2px;
   padding-left: 20px;
 }
+
+.comment_posted p {
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
   
 .comment_detail{
   position: absolute;
@@ -95,6 +98,7 @@ li::before{
   left: 55px;
   font-size: 13px;
   line-height: 1.23;
+  margin-bottom: 5px;
 }
 
 .form_title{
