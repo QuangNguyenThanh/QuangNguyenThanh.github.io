@@ -40,29 +40,29 @@ hr{
     margin: 10px;
 }
 
-.content_info{
+.content__info{
     padding-top: 10px;
 }
 
-.content_info--padding-top{
+.content__info--padding-top{
     padding-top: 25px;
 }
 
-.title_content--margin-bottom{
+.title__content--margin-bottom{
     margin-bottom: 13px;
 }
 
-.title_content{
+.title__content{
     font-weight: bold;
     color: #0a6395;
 }
 
-.title_content--decor{
+.title__content--decor{
     color: black;
     font-size: 15px;
 }
 
-.title_content_date{
+.title__content__date{
     color: #595959;
     font-size: 11px;
     font-weight: normal;
@@ -74,7 +74,7 @@ hr{
     background-color: white;
 }
 
-.comment_text{
+.comment__text{
     color: #0a6395;
 }
 
@@ -83,7 +83,7 @@ ul{
     padding-left: 0;
 }
 
-.read_more {
+.read__more {
     color: #0a6395;
     text-decoration: underline;
 }
@@ -106,14 +106,18 @@ li{
     margin-bottom: 30px;
 }
 
-.block--horoscopes .content_info{
-    font-size: 12px;
+.block--horoscopes .content__info{
+    font-size: 11px;
+}
+
+.content__horoscopes {
+    margin-right: 12px;
+    line-height: 1.2;
 }
 
 p{
-    margin-block-start: 0px;
-    margin-block-end: 0px;
-    margin: 0;
+    margin-top: 0;
+    margin-bottom: 0;
 }
 
 .italic{
@@ -132,21 +136,21 @@ p{
     padding-top: 10px;
 }
 
-.block--get_news{
+.block--get__news{
     height: 113px;
     margin-top: 20px;
 }
 
-.block--get_news img{
+.block--get__news img{
     float: right;
     margin: 0;
 }
 
-.news_info{
+.news__info{
     margin: 25px 30px 15px 20px;
 }
 
-.news_info p{
+.news__info p{
     margin-bottom: 5px;
 }
 
