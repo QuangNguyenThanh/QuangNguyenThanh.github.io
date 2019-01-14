@@ -1,6 +1,5 @@
 var filename = "leaves";
 var formatfile = ".png";
-var index = 0;
 var delay = 800;
 
 setInterval(function(){
@@ -21,7 +20,6 @@ setInterval(function(){
         "src": "images/" + filename + rd + formatfile,
         "alt": filename
     }).appendTo("#container");
-    index++;
     //let fall
     TweenMax.fromTo($(leaf),
     falltime, 
