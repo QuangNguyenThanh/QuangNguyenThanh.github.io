@@ -89,9 +89,11 @@ var BarChart = function(options) {
         ctx.fillText(title.titleBot, 700, MAIN_LINE_POSITION_Y + 150);
         ctx.fillStyle = "black";
         ctx.font = "30px Arial";
-        ctx.fillText("LEVEL", endX + 80, 300);
-        ctx.fillText("OF", endX + 80, 350);
-        ctx.fillText("POSITION", endX + 80, 400);
+        var textright = title.titleLeftRight.split(" ");
+        var i;
+        for (i = 0; i < textright.length; i++) {
+            ctx.fillText(textright[i], endX + 80, 300 + i * 50);
+        }
         ctx.translate(0, 600);
         ctx.rotate(-Math.PI / 2);
         ctx.textAlign = "center";
