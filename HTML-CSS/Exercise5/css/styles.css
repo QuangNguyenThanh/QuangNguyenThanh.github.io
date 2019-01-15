@@ -12,14 +12,16 @@ body {
 }
 
 ul {
+  display: flex;
+  flex-wrap: wrap;
   list-style: none;
+  width: 100%;
   padding: 0;
   margin: 0;
   border: 0;
 }
 
 li {
-  float: left;
   position: relative;
 }
 
@@ -55,13 +57,12 @@ a:hover img {
 .backtotop img {
   position: absolute;
   right: 9%;
-  top: 10%;
 }
 
 .footer__nav {
   position: absolute;
   left: 7%;
-  top: 90%;
+  top: 65%;
   font-size: 10px;
   font-family: "Meiryo", sans-serif;
 }
@@ -82,6 +83,6 @@ a:hover img {
   font-size: 10px;
   float: right;
   position: absolute;
-  top: 80%;
+  top: 55%;
   right: 9%;
 }
