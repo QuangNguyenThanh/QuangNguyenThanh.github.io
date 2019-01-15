@@ -23,6 +23,7 @@ hr{
     margin-block-start: 0px;
     margin-block-end: 0px;
     margin: 0;
+    margin-top: 1px;
 }
 
 .content{
@@ -130,11 +131,13 @@ p{
 
 .block--get__news{
     margin-top: 15px;
+    font-family: 'Times New Roman', Times, serif;
 }
 
 .block--get__news img{
     float: right;
     margin: 0;
+    margin-left: 20px;
 }
 
 .news__info{
@@ -159,7 +162,9 @@ p{
     color: #4d5d73;
     line-height: 1.2;
     padding: 10px 5px 10px 10px;
-    font-size: 11px;
+    margin-top: 1px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 12px;
 }
 
 a {
