@@ -6,17 +6,24 @@
   width: 100%;
   margin: 0 auto;
 }
-.header {
-  margin-top: 10px;
-}
 
 .--margin-left {
   margin-left: 20px;
 }
 
-.img {
-  max-width: 100%;
+img {
+  max-width: 100%;  
   height: auto;
+}
+
+.header {
+  margin-top: 10px;
+  width: 100%;
+}
+
+.head {
+  max-width: 75%;
+  width: 100%;
 }
 
 .row__setting {
@@ -110,17 +117,17 @@ li::after {
   display: flex;
   flex-wrap: wrap-reverse;
   align-items: flex-start;
+  justify-content: flex-end;
 }
 
 .icon__woman {
   float: left;
-  margin-left: 15px;
-  margin-right: 20px;
+  margin-left: 20px;
 }
 
 .icon__man {
   float: right;
-  margin-left: 15px;
+  margin-right: 25px;
 }
 
 .content__woman {
@@ -132,6 +139,7 @@ li::after {
     display: flex;
     align-items: center;
     font-size: 24px;
+    margin-left: 20px;
 }
 
 .content__woman::before {
@@ -157,6 +165,7 @@ li::after {
   align-items: center;
   margin-left: 20px;
   font-size: 24px;
+  margin-right: 20px;
 }
 
 .content__man:before {
