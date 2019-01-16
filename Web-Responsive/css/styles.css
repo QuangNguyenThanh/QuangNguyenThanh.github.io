@@ -1,0 +1,16 @@
+/* For width smaller than 400px: */
+body {
+    background-repeat: no-repeat;
+    background-image: url("../images/Background.jpg"); 
+    background-size: contain;
+    width: 1200px;
+    height: 2000px;
+  }
+  
+  /* For width 400px and larger: */
+  @media only screen and (min-width: 400px) {
+    body { 
+       background-image: url("../images/PC_e_1.png"); 
+       background-size: contain;
+    }
+  }
