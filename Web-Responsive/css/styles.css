@@ -221,18 +221,20 @@ p {
 
 .pre {
   float: left;
-  margin-top: 2%;
 }
 
 .next {
   float: right;
-  margin-top: 2%;
 }
 
 .foot {
   position: absolute;
   bottom: 0;
   width: 100%;
+}
+
+.foot img {
+  margin-top: 2%;
 }
 
 @media only screen and (max-width: 992px) {
@@ -277,7 +279,38 @@ p {
     font-size: 16px;
   }
 
-  img {
+  .foot img {
     max-width: 60%;
+  }
+}
+
+@media only screen and (max-width: 440px) {
+  * {
+    font-size: 8px;
+  }
+
+  .voiceall {
+    margin-top: 2px;
+    margin-left: 80px;
+  }
+  
+  ruby > rt {
+    font-size: 50%;
+  }
+
+  .content__man, .content__woman {
+    width: 50%;
+  }
+
+  .engtext {
+    font-size: 10px;
+  }
+
+  .main img {
+    max-width: 60%;
+  }
+
+  .foot img {
+    max-width: 50%;
   }
 }
