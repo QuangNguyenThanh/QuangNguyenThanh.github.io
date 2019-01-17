@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="vi">
+<html lang="en">
     <head>
         <title>Web Reponsive 1</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,142 +7,152 @@
     </head>
     <body>
         <div class="container">
-        <img class="header" src="images/header.png" alt="header" />  
-        <img class="head --margin-left" src="images/head.png" alt="head" />  
-            <div class="main --margin-left">
-                <div class="row row__setting">
-                    <div class="col-12">
-                        <img class="voiceall" src="images/icon-voice-all.png" />
-                        <ul>
-                            <li>日本語</li>
-                            <li>English</li>
-                        </ul>
-                    </div> 
-                </div>
-                <div class="row">
-                    <img class="sticker" src="images/sticker.png" />
-                </div>
-                <div class="row nocenter">
-                    <div class="col-3"></div>
-                    <div class="col-5 woman">
-                        <img class="icon__woman" src="images/icon-woman.png" alt="icon-woman" />
-                        <div class="content__woman" >			
-                            <img class="sound" src="images/icon-sound.png" alt="icon-sound" />			
-                            <p>
-                                <b><span class="highlight">エドワードさん</span> 、すみません。</b><br>
-                                <span class="engtext">dummy dummy dummy dummy dummy du<br>mmy dummy dummy dummy</span>
-                            </p>
+            <picture>
+                <source srcset="images/header_PC.png" media="(min-width: 1280px)">
+                <source srcset="images/header.png">
+                <img class="header" src="images/header.png" alt="header">
+            </picture>
+            <div class="content">
+                <img class="head" src="images/head.png" alt="head" /> 
+                <div class="main">
+                    <div class="row row__setting">
+                        <div class="col-12">
+                            <img class="voiceall" src="images/icon-voice-all.png" />
+                            <ul>
+                                <li>日本語</li>
+                                <li class="engtext"><b>English</b></li>
+                            </ul>
+                        </div> 
+                    </div>
+                    <div class="row">
+                        <img class="sticker" src="images/sticker.png" />
+                    </div>
+                    <div class="row nocenter">
+                        <div class="col-2"></div>
+                        <div class="col-6 woman">
+                            <img class="icon__woman" src="images/icon-woman.png" alt="icon-woman" />
+                            <div class="content__woman" >			
+                                <img class="sound" src="images/icon-sound.png" alt="icon-sound" />			
+                                <p>
+                                    <b><span class="highlight">エドワードさん</span> 、すみません。</b><br>
+                                    <span class="engtext">dummy dummy dummy dummy dummy <span class="hide">du<br>mmy dummy dummy dummy</span></span>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-4"></div> 
+                    </div>
+                    <div class="row nocenter">
+                        <div class="col-5"></div>
+                        <div class="col-5 man">
+                            <div class="content__man" >			
+                                <img class="sound" src="images/icon-sound.png" alt="icon-sound" />			
+                                <p>
+                                    <b>はい、<ruby>何<rt>なん</rt></ruby>ですか</b><br>
+                                    <span class="engtext">dummy dummy dummy dummy</span>
+                                </p>
+                            </div>
+                            <img class="icon__man" src="images/icon-man.png" alt="icon-woman" />
+                        </div>
+                        <div class="col-2"></div> 
+                    </div>
+                    <div class="row nocenter row--nomarginbot">
+                        <div class="col-2"></div>
+                        <div class="col-8 woman row--nomarginbot">
+                            <img class="icon__woman" src="images/icon-woman.png" alt="icon-woman" />
+                            <div class="content__woman" >			
+                                <img class="sound" src="images/icon-sound.png" alt="icon-sound" />			
+                                <p>
+                                    <b><ruby>今、<rt>いま</rt></ruby>日本まつりで<br><span class="highlight">ヨサコイが おしえられる<ruby>人<rt>ひと</rt></ruby></span> を さがしてるんですが…。<br>おねがいできませんか。</b>
+                                    <br>
+                                    <span class="engtext">dummy dummy dummy dummy dummy du
+                                            mmy dummy dummy dummy</span>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-2 row--nomarginbot row--nomargintop"></div> 
+                    </div>
+                    <div class="row row--nomargintop row--nomarginbot">
+                        <div class="col-12 row--nomargintop">
+                            <picture>
+                                <source srcset="images/arrow.png" media="(min-width: 1280px)">
+                                <source srcset="images/pic-arow-sp.png">
+                                <img src="images/pic-arow-sp.png" alt="pic-arow-sp" />
+                            </picture>
                         </div>
                     </div>
-                    <div class="col-4"></div> 
-                </div>
-                <div class="row nocenter">
-                    <div class="col-5"></div>
-                    <div class="col-5 man">
-                        <div class="content__man" >			
-                            <img class="sound" src="images/icon-sound.png" alt="icon-sound" />			
-                            <p>
-                                <b>はい、<ruby>何<rt>なん</rt></ruby>ですか</b><br>
-                                <span class="engtext">dummy dummy dummy dummy</span>
-                            </p>
+                    <div class="row hide">
+                        <div class="col-2"></div>
+                        <div class="col-8">
+                            <img class="smile" src="images/pic-man-smile.png" alt="pic-man-smile" />
+                            <img class="sad" src="images/pic-man-sad.png" alt="pic-man-sad" />
                         </div>
-                        <img class="icon__man" src="images/icon-man.png" alt="icon-woman" />
+                        <div class="col-2"></div>
                     </div>
-                    <div class="col-2"></div> 
-                </div>
-                <div class="row nocenter row--nomarginbot">
-                    <div class="col-3"></div>
-                    <div class="col-5 woman row--nomarginbot">
-                        <img class="icon__woman" src="images/icon-woman.png" alt="icon-woman" />
-                        <div class="content__woman" >			
-                            <img class="sound" src="images/icon-sound.png" alt="icon-sound" />			
-                            <p>
-                                <b><ruby>今、<rt>いま</rt></ruby>日本まつりで<br><span class="highlight">ヨサコイが おしえられる<ruby>人<rt>ひと</rt></ruby></span> を<br>さがしてるんですが…。<br>おねがいできませんか。</b>
-                                <br>
-                                <span class="engtext">dummy dummy dummy dummy dummy du
-                                        mmy dummy dummy dummy </span>
-                            </p>
+                    <div class="row nocenter row--nomargintop">
+                        <div class="col-6 man">
+                            <div class="content__man" >			
+                                <img class="sound" src="images/icon-sound.png" alt="icon-sound" />			
+                                <p>
+                                    <b><span class="highlight">ヨサコイ</span> ですか。いいですよ。</b><br/>
+                                    <span class="engtext">dummy dummy dummy dummy</span>
+                                </p>
+                            </div>
+                            <img class="icon__man hide" src="images/icon-man.png" alt="icon-woman" />
                         </div>
+                        <div class="col-6"></div>  
                     </div>
-                    <div class="col-4 row--nomarginbot row--nomargintop"></div> 
-                </div>
-                <div class="row row--nomargintop">
-                    <div class="col-12 row--nomargintop">
-                        <img src="images/pic-arow-sp.png" alt="pic-arow-sp" />
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-4"></div>
-                    <div class="col-4">
-                        <img class="smile" src="images/pic-man-smile.png" alt="pic-man-smile" />
-                        <img class="sad" src="images/pic-man-sad.png" alt="pic-man-sad" />
-                    </div>
-                    <div class="col-4"></div>
-                </div>
-                <div class="row nocenter">
-                    <div class="col-5"></div>
-                    <div class="col-5 man">
-                        <div class="content__man" >			
-                            <img class="sound" src="images/icon-sound.png" alt="icon-sound" />			
-                            <p>
-                                <b><span class="highlight">ヨサコイ</span> ですか。いいですよ。</b><br/>
-                                <span class="engtext">dummy dummy dummy dummy</span>
-                            </p>
+                    <div class="row nocenter">
+                        <div class="col-6 man">
+                            <div class="content__man" >			
+                                <img class="sound mute" src="images/icon-sound.png" alt="icon-sound" />			
+                                <p>
+                                    <b><span class="highlight">はじめて</span>ですが、やってみます。</b><br>							
+                                    <span class="engtext">dummy dummy dummy dummy</span>
+                                </p>
+                            </div>
+                            <img class="icon__man hide" src="images/icon-man.png" alt="icon-woman" />
                         </div>
-                        <img class="icon__man" src="images/icon-man.png" alt="icon-woman" />
+                        <div class="col-6"></div> 
                     </div>
-                    <div class="col-2"></div> 
-                </div>
-                <div class="row nocenter">
-                    <div class="col-5"></div>
-                    <div class="col-5 man">
-                        <div class="content__man" >			
-                            <img class="sound hide" src="images/icon-sound.png" alt="icon-sound" />			
-                            <p>
-                                <b><span class="highlight">はじめて</span>ですが、やってみます。</b><br>							
-                                <span class="engtext">dummy dummy dummy dummy</span>
-                            </p>
+                    <div class="row nocenter">
+                        <div class="col-6 woman">
+                            <img class="icon__woman" src="images/icon-woman.png" alt="icon-woman" />
+                            <div class="content__woman content__woman__left" >			
+                                <img class="sound" src="images/icon-sound.png" alt="icon-sound" />			
+                                <p>
+                                    <b>ありがとうございます。<br>よろしく おねがいします。</b><br>
+                                    <span class="engtext">dummy dummy dummy<span class="hide">dummy dummy dummy<br> dummy dummy dummy</span></span>
+                                </p>
+                            </div>
                         </div>
-                        <img class="icon__man" src="images/icon-man.png" alt="icon-woman" />
+                        <div class="col-6"></div> 
                     </div>
-                    <div class="col-2"></div> 
-                </div>
-                <div class="row nocenter">
-                    <div class="col-3"></div>
-                    <div class="col-5 woman">
-                        <img class="icon__woman" src="images/icon-woman.png" alt="icon-woman" />
-                        <div class="content__woman" >			
-                            <img class="sound" src="images/icon-sound.png" alt="icon-sound" />			
-                            <p>
-                                <b>ありがとうございます。<br>よろしく おねがいします。</b><br>
-                                <span class="engtext">dummy dummy dummy dummy dummy dummy<br> dummy dummy dummy</span>
-                            </p>
+                    <div class="row nocenter">
+                        <div class="col-6 man">
+                            <div class="content__man" >			
+                                <img class="sound mute" src="images/icon-sound.png" alt="icon-sound" />			
+                                <p>
+                                    <b>こちらこそ。</b><br>							
+                                    <span class="engtext">dummy dummy dummy dummy</span>
+                                </p>
+                            </div>
+                            <img class="icon__man hide" src="images/icon-man.png" alt="icon-woman" />
                         </div>
+                        <div class="col-6"></div> 
                     </div>
-                    <div class="col-4"></div> 
-                </div>
-                <div class="row nocenter">
-                    <div class="col-5"></div>
-                    <div class="col-5 man">
-                        <div class="content__man" >			
-                            <img class="sound hide" src="images/icon-sound.png" alt="icon-sound" />			
-                            <p>
-                                <b>こちらこそ。</b><br>							
-                                <span class="engtext">dummy dummy dummy dummy</span>
-                            </p>
-                        </div>
-                        <img class="icon__man" src="images/icon-man.png" alt="icon-woman" />
-                    </div>
-                    <div class="col-2"></div> 
-                </div>
-                <div class="row foot">
-                    <div class="col-12">
-                        <img class="pre" src="images/btn-pre.png" alt="btn-pre" />
-                        <img src="images/btn-test.png" alt="btn-test" />
-                        <img class= "next" src="images/btn-next.png" alt="btn-pre" />
+                    <div class="row foot">
+                            <div class="col-12 foot">
+                                <img src="images/btn-pre.png" alt="btn-pre" />
+                                <picture>
+                                    <source srcset="images/btn-next-arrow.jpg" media="(min-width: 1280px)">
+                                    <source srcset="images/btn-test.png">
+                                    <img src="images/btn-test.png" alt="btn-test" />
+                                </picture>
+                                <img src="images/btn-next.png" alt="btn-pre" />
+                            </div>
                     </div>
                 </div>
-            </div>
+            </div>    
         </div>
     </body>
 </html>

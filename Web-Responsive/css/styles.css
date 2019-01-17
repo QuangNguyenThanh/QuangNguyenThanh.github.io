@@ -1,5 +1,6 @@
 * {
   padding: 0;
+  margin: 0;
   box-sizing: border-box;
 }
 .container {
@@ -18,12 +19,13 @@ img {
 
 .header {
   margin-top: 10px;
-  width: 100%;
+  /* max-width: 60%;
+  max-height: 50%; */
+  width: 99%;
 }
 
 .head {
-  max-width: 75%;
-  width: 100%;
+  max-width: 468px;
 }
 
 .row__setting {
@@ -31,64 +33,60 @@ img {
 }
 
 .row {
-  margin-top: 5px;
-  margin-bottom: 5px;
+  margin-top: 10px;
+  margin-bottom: 10px;
   text-align: center;
+}
+
+.content {
+  width: 93.75%;
+  margin: 0 auto;
+  max-width: 600px;
+  min-height: 1590px;
+  margin-top: 5px;
 }
 
 .main {
   position: relative;
-  width: 93.75%;
-  margin: 0 auto;
   min-height: 1590px;
-  margin-top: 5px;
   background: url("../images/bg-inner.jpg") no-repeat center;
   background-size: cover;
 }
 
 ul {
+  position: absolute;
   list-style: none;
-  float: right;
-  margin-right: 50px;
-  margin-top: 5px;
-  margin-bottom: 5px;
+  text-align: left;
   line-height: 2;
+  right: 2%;
+  top: 15px;
 }
 li {
   position: relative;
   margin-bottom: 7px;
   margin-right: 50px;
   color: white;
-  float: left;
 }
 li::after {
   position: absolute;
+  right: -30px;
   margin-left: 10px;
   content: url("../images/img_check.png");
   top: 2px;
 }
 
 .voiceall {
-  margin-top: 5px;
-  margin-left: 240px;
+  margin-top: 20px;
+  margin-bottom: 15px;
 }
 
 .sticker {
   margin-top: 20px;
 }
 
-.col-1 {width: 8.33%;}
-.col-2 {width: 16.66%;}
-.col-3 {width: 25%;}
-.col-4 {width: 33.33%;}
-.col-5 {width: 41.66%;}
-.col-6 {width: 50%;}
-.col-7 {width: 58.33%;}
-.col-8 {width: 66.66%;}
-.col-9 {width: 75%;}
-.col-10 {width: 83.33%;}
-.col-11 {width: 91.66%;}
-.col-12 {width: 100%;}
+[class*="col-"] {   
+  width: 100%;
+}
 
 [class*="col-"] {
   float: left;
@@ -121,8 +119,7 @@ li::after {
 }
 
 .icon__woman {
-  float: left;
-  margin-left: 20px;
+  margin-left: 25px;
 }
 
 .icon__man {
@@ -184,7 +181,10 @@ li::after {
 .sound {
   display: block;
   margin-left: 2%;
-  margin-right: 3%;
+}
+
+.mute {
+  display: none;
 }
 
 .highlight {
@@ -201,6 +201,7 @@ li::after {
 p {
   margin-top: 5px;
   margin-bottom: 5px;
+  margin-left: 10px;
 }
 
 .row--nomarginbot {
@@ -212,33 +213,20 @@ p {
 }
 
 .smile {
-  margin-right: 25%;
-}
-
-.hide {
-  opacity: 0;
-}
-
-.pre {
-  float: left;
-}
-
-.next {
-  float: right;
+  margin-right: 20%;
 }
 
 .foot {
   position: absolute;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: space-between;
   bottom: 0;
   width: 100%;
 }
 
-.foot img {
-  margin-top: 2%;
-}
-
-@media only screen and (max-width: 992px) {
-  /* For mobile phones: */
+/* @media only screen and (max-width: 992px) {
   [class*="col-"] {   
     width: 100%;
   }
@@ -260,9 +248,9 @@ p {
   .smile {
     margin-right: 17%;
   }
-}
+} */
 
-@media only screen and (max-width: 630px) {
+@media only screen and (max-width: 639px) {
   * {
     font-size: 14px;
   }
@@ -289,11 +277,6 @@ p {
     font-size: 8px;
   }
 
-  .voiceall {
-    margin-top: 2px;
-    margin-left: 80px;
-  }
-  
   ruby > rt {
     font-size: 50%;
   }
@@ -312,5 +295,91 @@ p {
 
   .foot img {
     max-width: 50%;
+  } 
+}
+
+@media only screen and (min-width: 1280px) {
+  .col-1 {width: 8.33%;}
+  .col-2 {width: 16.66%;}
+  .col-3 {width: 25%;}
+  .col-4 {width: 33.33%;}
+  .col-5 {width: 41.66%;}
+  .col-6 {width: 50%;}
+  .col-7 {width: 58.33%;}
+  .col-8 {width: 66.66%;}
+  .col-9 {width: 75%;}
+  .col-10 {width: 83.33%;}
+  .col-11 {width: 91.66%;}
+  .col-12 {width: 100%;}
+
+  .head {
+    width: 311px;
+  }
+
+  .content {
+    max-width: 870px;
+    min-height: 1024px;
+  }
+  .main {
+    min-height: 1024px;
+    background: url("../images/bg-inner.jpg") no-repeat
+  } 
+  .voiceall {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  
+  li {
+    float: left;
+  }
+
+  /* .icon__woman {
+    margin-left: 0; 
+  } */
+
+  .hide {
+    display: none;
+  }
+
+  .icon__man {
+    margin-right: -20px;
+  }
+
+  .icon__woman {
+    margin-left: 20px;
+  }
+
+  .content__man, .content__woman {
+    width: 75%;
+  }
+
+  .content__woman__left {
+    width: 65%;
+  }
+
+  .content__man {
+    margin-left: 0;
+  }
+
+  * {
+    font-size: 14px;
+  }
+
+  .engtext {
+    font-size: 16px;
+  }
+
+  ruby > rt {
+    font-size: 50%;
+  }
+
+  .smile, .sad {
+    display: none;
+  }
+
+  .foot {
+    bottom: -8%;
   }
 }
+
+ 
