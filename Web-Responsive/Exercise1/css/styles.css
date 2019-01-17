@@ -103,7 +103,7 @@ li::after {
 }
 
 .nocenter {
-  text-align: unset;
+  text-align: left;
 }
 
 .woman {
