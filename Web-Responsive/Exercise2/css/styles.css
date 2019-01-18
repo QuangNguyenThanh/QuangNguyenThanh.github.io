@@ -127,19 +127,19 @@ img {
   display: table;
 }
 
-.redtext__horror {
+.js-redtext__horror {
   color: #cc0000;
 }
 
-.whitetext__horror {
+.js-whitetext__horror {
   color: #999;
 }
 
-.hr__horror {
+.js-hr__horror {
   border-top: 1px solid #cc0000;
 }
 
-.red__area {
+.js-red__area {
   background-color: #330000;
 }
 
