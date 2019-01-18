@@ -1,6 +1,7 @@
 body {
   min-width: 640px;
   font-size: 14px;
+  padding-bottom: 5px;
 }
 
 * {
@@ -10,6 +11,7 @@ body {
 }
 
 .container {
+  position: relative;
   width: 100%;
   max-width: 640px;
   margin: 0 auto;
@@ -26,16 +28,18 @@ img {
   font-size: 0;
 }
 
-.head {
-  position: relative;
-  padding-top: 40px;
-  padding-bottom: 40px;
-  background-color: #666
-}
-
 .title {
   font-size: 26px;
   letter-spacing: 2px;
+}
+
+.head {
+  position: relative;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  background-color: #666;
+  font-size: 32px;
+  letter-spacing: 3px;
 }
 
 .caution {
@@ -53,7 +57,7 @@ img {
 }
 
 .intro * {
-  margin-bottom: 10px;
+  margin-bottom: 25px;
 }
 
 .fixtext {
@@ -72,8 +76,7 @@ img {
 }
 
 .row {
-  margin-top: 20px;
-  margin-bottom: 10px;
+  margin-top: 40px;
   text-align: center;
 }
 
@@ -88,11 +91,25 @@ img {
   background-color: #ccc;
   font-size: 12px;
   padding: 10px 0 10px 10px;
-  margin-bottom: 30px;
+  margin-bottom: 35px;
 }
 
 .border__top {
   border-top: 1px solid black;
+}
+
+.blood {
+  position: absolute;
+  max-width: 640px;
+  bottom: 5px;
+  left: 0;
+  display: none;
+}
+
+.footer {
+  position: relative;
+  margin-top: 120px;
+  display: flex;
 }
 
 [class*="col-"] {   
@@ -110,13 +127,29 @@ img {
   display: table;
 }
 
+.redtext__horror {
+  color: #cc0000;
+}
+
+.whitetext__horror {
+  color: #999;
+}
+
+.hr__horror {
+  border-top: 1px solid #cc0000;
+}
+
+.red__area {
+  background-color: #330000;
+}
+
 @media only screen and (min-width: 1280px) {
-  .col-1 {width: 48%;}
-  .col-2 {width: 3.5%;}
+  .col-1 {width: 47%;}
+  .col-2 {width: 4%;}
   .col-3 {width: 100%;}
 
   .content {
-    padding-left: 30px;
+    padding-left: 70px;
     padding-right: 30px;
   }
 
@@ -124,11 +157,45 @@ img {
     max-width: 1280px;
   }
 
+  .head {
+    position: relative;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    background-color: #666;
+    font-size: 60px;  
+  }
+
+  .blood {
+    max-width: 1280px;
+  }
+
+  .intro {
+    padding-top: 40px;
+    padding-bottom: 15px;
+  }
+
+  .title {
+    font-size: 48px;
+  }
+
+  .caution {
+    max-width: 339px;
+  }
+
+  .small__title {
+    font-size: 32px;
+  }
+
+  .fixtext {
+    font-size: 40px;
+  }
+
+  .small__text {
+    font-size: 22px;
+  }
+
   .normal__text {
     font-size: 17px;
-  }
-  .footer {
-    margin-top: 50px;
   }
 }
 
