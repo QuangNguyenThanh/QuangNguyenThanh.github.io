@@ -37,7 +37,7 @@ img {
   display: none;
 }
 
-@media only screen and (min-width: 1280px) {
+@media only screen and (min-width: 1200px) {
   .col-1 {width: 50%;}
   .col-2 {width: 100%;}
 
