@@ -117,7 +117,6 @@ img {
   float: left;
   position: relative;
   padding: 1px;
-  /* border: 1px solid red; */
 }
 
 .row::after {
