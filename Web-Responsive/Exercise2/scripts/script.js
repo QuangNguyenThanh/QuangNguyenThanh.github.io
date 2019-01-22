@@ -10,6 +10,7 @@ $(window).scroll(function() {
                 $(this).attr("src", $(this).attr("src").replace(".png", "_hide.png"));
             });
             //set css horror
+            $("html, body").css("overflow", "hidden");
             $(".container").css("background-color", "black");
             $(".title, .small__title, .time").addClass("js-redtext__horror");
             $(".col-1").addClass("js-hr__horror");
@@ -30,6 +31,7 @@ $(window).scroll(function() {
                     $(".normal__text, .small__text").removeClass("js-whitetext__horror");
                     $(".time, .intro").removeClass("js-red__area");
                     onScroll = false;
+                    $("html, body").css("overflow", "auto");
                 }, 1000);
             });
         }
