@@ -8,6 +8,7 @@ body {
   box-sizing: border-box;
   font-size: 0;
 }
+
 .container {
   width: 100%;
   max-width: 640px;
@@ -76,10 +77,6 @@ img {
 
   .hide {
     display: block;
-  }
-
-  .button__left img, .button__right img {
-    max-width: 100%;
   }
 
   .button__left {
