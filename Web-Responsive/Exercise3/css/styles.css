@@ -16,7 +16,7 @@ body {
 }
 
 img {
-  max-width: 100%;  
+  /* max-width: 100%;   */
   height: auto;
 }
 
@@ -37,6 +37,36 @@ img {
   display: none;
 }
 
+.button__left {
+  position: absolute;
+  left: 7%;
+  top: 15%;
+}
+
+.button__right {
+  position: absolute;
+  right: 7%;
+  top: 15%;
+}
+
+.button__item__left {
+  position: absolute;
+  left: 9.2%;
+  bottom: 10.3%;
+}
+
+.button__item__right {
+  position: absolute;
+  right: 9%;
+  bottom: 9.5%;
+}
+
+.button__fb {
+  position: absolute;
+  top: 12%;
+  left: 5.6%;
+}
+
 @media only screen and (min-width: 1200px) {
   .col-1 {width: 50%;}
   .col-2 {width: 100%;}
@@ -47,6 +77,35 @@ img {
 
   .hide {
     display: block;
+  }
+
+  .button__left img, .button__right img {
+    max-width: 100%;
+  }
+
+  .button__left {
+    left: 12.7%;
+    top: 11%;
+  }
+  
+  .button__right {
+    right: 12.7%;
+    top: 11%;
+  }
+  
+  .button__item__left {
+    left: 48%;
+    bottom: 11.5%;
+  }
+  
+  .button__item__right {
+    right: 47%;
+    bottom: 11.5%;
+  }
+  
+  .button__fb {
+    top: 13%;
+    left: 29.15%;
   }
 }
 
