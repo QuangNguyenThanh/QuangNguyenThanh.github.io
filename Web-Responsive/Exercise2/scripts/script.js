@@ -14,7 +14,7 @@ $(window).scroll(function() {
             $(".container").css("background-color", "black");
             $("h1, h3, .time").addClass("js-redtext__horror");
             $(".col-1").addClass("js-hr__horror");
-            $(".normal__text, .small__text").addClass("js-whitetext__horror");
+            $(".normal__text").addClass("js-whitetext__horror");
             $(".time").addClass("js-red__area");
             $("#intro").attr("src", $("#intro").attr("src").replace(".jpg", "_horror.jpg"));
             //scroll to top
@@ -26,14 +26,14 @@ $(window).scroll(function() {
                         $(this).attr("src", $(this).attr("src").replace("_hide.png", ".png"));
                     });
                     //remove css horror
+                    $("html, body").css("overflow", "auto");
                     $(".container").css("background-color", "white");
                     $("h1, h3, .time").removeClass("js-redtext__horror");
                     $(".col-1").removeClass("js-hr__horror");
-                    $(".normal__text, .small__text").removeClass("js-whitetext__horror");
+                    $(".normal__text").removeClass("js-whitetext__horror");
                     $(".time").removeClass("js-red__area");
                     $("#intro").attr("src", $("#intro").attr("src").replace("_horror.jpg", ".jpg"));
                     onScroll = false;
-                    $("html, body").css("overflow", "auto");
                 }, 1000);
             });
         }
