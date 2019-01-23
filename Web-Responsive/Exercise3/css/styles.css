@@ -33,6 +33,76 @@ img {
   display: table;
 }
 
+p {
+  font-weight: 600;
+  position: absolute;
+}
+
+ul{
+  position: absolute;
+  list-style: none;
+}
+
+.text__banner {
+  text-align: center;
+  color: #4d6eb1;
+  font-size: 23px;
+  font-weight: bold;
+  width: 84%;
+  bottom: 11%;
+  left: 9%;
+}
+
+.text__project {
+  font-size: 22px;
+  text-align: left;
+  color: #305486;
+  font-weight: bold;
+  width: 80%;
+  left: 10%;
+  bottom: 8%;
+}
+
+.text__project li {
+  font-size: 22px;
+}
+
+.text__case {
+  color: black;
+  font-size: 13px;
+  text-align: left;
+  font-weight: bold;
+}
+
+.text__case li {
+  display: inline;
+  font-size: 20px;
+}
+
+.text__case__1 {
+  width: 35%;
+  left: 18%;
+  bottom: 10%;
+}
+
+.text__case__2 {
+  width: 34%;
+  left: 50%;
+  bottom: 14%;
+}
+
+.text__case__3 {
+  width: 42%;
+  left: 18%;
+  bottom: 16%;
+}
+
+.text__case__4 {
+  width: 37%;
+  left: 45%;
+  bottom: 21%;
+}
+
 .hide {
   display: none;
 }
@@ -77,6 +147,49 @@ img {
 
   .hide {
     display: block;
+  }
+
+  .text__banner {
+    font-size: 20px;
+    width: 40%;
+    bottom: 9%;
+    left: 30%;
+  }
+
+  .text__project {
+    text-align: center;
+    width: 80%;
+    left: 10%;
+    bottom: 7%;
+  }
+
+  .text__project li {
+    font-size: 17px;
+  }
+
+  .text__case li {
+    display: block;
+    font-size: 14px;
+  }
+
+  .text__case__1 {
+    left: 36%;
+    bottom: 10%;
+  }
+  
+  .text__case__2 {
+    left: 6%;
+    bottom: 10%;
+  }
+  
+  .text__case__3 {
+    left: 36%;
+    bottom: 18%;
+  }
+  
+  .text__case__4 {
+    left: 6%;
+    bottom: 26%;
   }
 
   .button__left {
