@@ -1,7 +1,7 @@
 var onScroll = false;
 
 $(window).scroll(function() {
-    if(Math.floor($(window).scrollTop() + $(window).height()) >= $(document).height() - 1) {
+    if(Math.floor($(window).scrollTop() + $(window).height()) >= $(document).height() - 1) { 
         if (!onScroll) {
             onScroll = true;
             $(".blood").show(); //show blood
