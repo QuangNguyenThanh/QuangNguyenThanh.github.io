@@ -1,7 +1,7 @@
 function addProduct() {
     //get input
-    var name = document.getElementById("product_name-js").value;
-
+    var name = document.getElementById("product_name").value;
+    console.log(name);
     //check length input
     if (name.trim().length == 0) {
         alert("Product name is null");
@@ -12,26 +12,22 @@ function addProduct() {
         return;
     }
 
-    var list_product = document.getElementById("list_product-js");
+    var list_product = document.getElementById("list_product");
     var parent = document.createElement("div");
-    parent.setAttribute("class", "node-js");
+    parent.setAttribute("class", "node");
 
     //check available
     var chil = list_product.children;
     var i;
     for (i = 0; i < chil.length; i++) {
-        if (chil[i].children[1].innerHTML == name) {
+        if (chil[i].children[0].innerHTML == name) {
             alert("Product is available");
             return;
         }
     }
     //remove text in text box
-    document.getElementById("product_name-js").value = "";
+    document.getElementById("product_name").value = "";
     //create node
-    var index = document.createElement("p");
-    index.setAttribute("class", "index-js");
-    index.innerHTML =  chil.length + 1;
-
     var x = document.createElement("p");
     x.setAttribute("id", "product-js");
     x.setAttribute("class", "product-js");
@@ -45,14 +41,8 @@ function addProduct() {
         var deleted = close.parentNode;
         var parentDelete = deleted.parentNode;
         parentDelete.removeChild(deleted);
-        var dir = deleted.children[0].innerHTML;
-        //set index
-        for (i = dir - 1; i < parentDelete.children.length; i++) {
-            parentDelete.children[i].children[0].innerHTML = i + 1;
-        }
     }
     //add product to list
-    parent.appendChild(index);
     parent.appendChild(x);
     parent.appendChild(close);
     list_product.appendChild(parent);

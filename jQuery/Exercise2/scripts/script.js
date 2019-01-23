@@ -12,17 +12,17 @@ var countSlide;
 //window load
 window.onload = WindowEventLoaded
 function WindowEventLoaded() {
-    $("#item-1").show();
-    $("#item_nav-1").css("opacity", opac);
+    $(".slideshow > li").eq(0).show();
+    $(".item_nav").eq(0).css("opacity", opac);
     countSlide = $("#slideshow-js li").length;
     var i;
-    for (i = 1; i <= countSlide; i++) {
-        $("#item-" + i).animate({
-            left: "+=" + width * (i - 1) + "px"
+    for (i = 0; i <= countSlide; i++) {
+        $(".slideshow > li").eq(i).animate({
+            left: "+=" + width * i + "px"
         });
     }
-    for (i = 2; i <= countSlide; i++) {
-        $("#item-" + i).show(100);
+    for (i = 1; i <= countSlide; i++) {
+        $(".slideshow > li").eq(i).show(100);
     }
     timer();
 }
@@ -30,29 +30,29 @@ function WindowEventLoaded() {
 $(document).ready(function() {
     //click arrow left
     $("#arrowleft-js").click(function(){
-        setAnimateOpacity("#item_nav-", index, 1);
+        setAnimateOpacity(".item_nav", index - 1, 1);
         index--;
         if (index < 1) {
             index = countSlide;
-            moveLeft("#item-", width * (countSlide - 1));
+            moveLeft(".items", width * (countSlide - 1));
         } else {
-            moveRight("#item-", width);
+            moveRight(".items", width);
         }  
-        setAnimateOpacity("#item_nav-", index, opac);
+        setAnimateOpacity(".item_nav", index - 1, opac);
         clearInterval(interval);
         timer();
     });
     //click arrow right
     $("#arrowright-js").click(function(){
-        setAnimateOpacity("#item_nav-", index, 1);
+        setAnimateOpacity(".item_nav", index - 1, 1);
         index++;
         if (index > countSlide) {
             index = 1;
-            moveRight("#item-", width * (countSlide - 1));
+            moveRight(".items", width * (countSlide - 1));
         } else {
-            moveLeft("#item-", width);
+            moveLeft(".items", width);
         }  
-        setAnimateOpacity("#item_nav-", index, opac);
+        setAnimateOpacity(".item_nav", index - 1, opac);
         clearInterval(interval);
         timer();
     });
@@ -60,9 +60,9 @@ $(document).ready(function() {
     $(".item_nav").click(function(){
         var item = $(this).attr("id");
         var choice = item.split("-");
-        move(index, choice[1]);
-        setAnimateOpacity("#item_nav-", choice[1], opac);
-        setAnimateOpacity("#item_nav-", index, 1);
+        move(index, $(this).index());
+        setAnimateOpacity(".item_nav", $(this).index(), opac);
+        setAnimateOpacity(".item_nav", index, 1);
         index = choice[1];
         clearInterval(interval);
         timer();
@@ -93,8 +93,8 @@ function move(indexA, indexB) {
  */
 function moveLeft(obj, distance) {
     var i;
-    for (i = 1; i <= countSlide; i++) {
-        $(obj + i).animate({
+    for (i = 0; i < countSlide; i++) {
+        $(obj).eq(i).animate({
             left: "-=" + distance + "px"
         });
     }
@@ -106,8 +106,8 @@ function moveLeft(obj, distance) {
  */
 function moveRight(obj, distance) {
     var i;
-    for (i = 1; i <= countSlide; i++) {
-        $(obj + i).animate({
+    for (i = 0; i < countSlide; i++) {
+        $(obj).eq(i).animate({
             left: "+=" + distance + "px"
         });
     }
@@ -119,7 +119,7 @@ function moveRight(obj, distance) {
  * @param {value of opacity} value 
  */
 function setAnimateOpacity(obj, index, value) {
-    $(obj + index).animate({
+    $(obj).eq(index).animate({
         opacity: value
     });
 }

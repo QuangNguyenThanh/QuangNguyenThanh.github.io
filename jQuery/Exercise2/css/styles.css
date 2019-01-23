@@ -46,3 +46,7 @@
     margin-top: 150px;
     margin-right: 50px;
 }
+
+#arrowleft-js, #arrowright-js, .item_nav {
+    cursor: pointer;
+}
