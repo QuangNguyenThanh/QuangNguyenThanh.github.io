@@ -1,6 +1,6 @@
 body {
   min-width: 640px;
-  font-size: 14px;
+  font-size: 18px;
   padding-bottom: 5px;
   zoom: 1;
 }
@@ -17,6 +17,8 @@ body {
   max-width: 640px;
   margin: 0 auto;
   text-align: center;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 img {
@@ -29,50 +31,19 @@ img {
   font-size: 0;
 }
 
-.title {
-  font-size: 26px;
-  letter-spacing: 2px;
+.banner, #intro {
+  max-width: 640px;
+  height: 50%;
 }
 
-.head {
-  position: relative;
-  padding-top: 100px;
-  padding-bottom: 100px;
-  background-color: #666;
-  font-size: 32px;
-  letter-spacing: 3px;
-}
-
-.caution {
-  max-width: 170px;
-  position: absolute;
-  bottom: 10px;
-  right: 30px;
-}
-
-.intro {
-  background-color: #333;
-  color: white;
-  padding-top: 15px;
-  padding-bottom: 5px;
-}
-
-.intro * {
-  margin-bottom: 25px;
-}
-
-.fixtext {
-  letter-spacing: 0;
-  font-size: 18px;
-}
-
-.small__text {
-  font-size: 12px;
+h3 {
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 .normal__text {
   text-align: left;
-  min-height: 110px;
+  min-height: 120px;
   line-height: 1.2;
 }
 
@@ -81,16 +52,14 @@ img {
   text-align: center;
 }
 
-.small__title {
-  margin-top: 5px;
-  margin-bottom: 5px;
-  font-size: 16px;
+.row--nomargintop {
+  margin-top: 0;
 }
 
 .time {
   text-align: left;
   background-color: #ccc;
-  font-size: 12px;
+  font-size: 14px;
   padding: 10px 0 10px 10px;
   margin-bottom: 35px;
 }
@@ -148,9 +117,17 @@ img {
   .col-2 {width: 4%;}
   .col-3 {width: 100%;}
 
+  body {
+    font-size: 24px;
+  }
+
   .content {
     padding-left: 70px;
     padding-right: 30px;
+  }
+
+  .row--nomargintop {
+    margin-top: 40px;
   }
 
   .container {
@@ -169,33 +146,13 @@ img {
     max-width: 1280px;
   }
 
-  .intro {
-    padding-top: 40px;
-    padding-bottom: 15px;
-  }
-
-  .title {
-    font-size: 48px;
-  }
-
-  .caution {
-    max-width: 339px;
-  }
-
-  .small__title {
-    font-size: 32px;
-  }
-
-  .fixtext {
-    font-size: 40px;
-  }
-
-  .small__text {
-    font-size: 22px;
+  .banner, #intro {
+    max-width: 1280px;
+    height: 100%;
   }
 
   .normal__text {
-    font-size: 17px;
+    font-size: 16px;
   }
 }
 

@@ -276,7 +276,8 @@ p {
     float: left;
   }
   .show {
-    display: block;
+    /* display: block; */
+    display: inline;
   }
   .hide {
     display: none;

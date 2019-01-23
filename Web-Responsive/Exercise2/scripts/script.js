@@ -12,10 +12,11 @@ $(window).scroll(function() {
             //set css horror
             $("html, body").css("overflow", "hidden");
             $(".container").css("background-color", "black");
-            $(".title, .small__title, .time").addClass("js-redtext__horror");
+            $("h1, h3, .time").addClass("js-redtext__horror");
             $(".col-1").addClass("js-hr__horror");
             $(".normal__text, .small__text").addClass("js-whitetext__horror");
-            $(".time, .intro").addClass("js-red__area");
+            $(".time").addClass("js-red__area");
+            $("#intro").attr("src", $("#intro").attr("src").replace(".jpg", "_horror.jpg"));
             //scroll to top
             $("html, body").animate({ scrollTop: 0 }, 5000, function() {
                 setTimeout(() => {
@@ -26,10 +27,11 @@ $(window).scroll(function() {
                     });
                     //remove css horror
                     $(".container").css("background-color", "white");
-                    $(".title, .small__title, .time").removeClass("js-redtext__horror");
+                    $("h1, h3, .time").removeClass("js-redtext__horror");
                     $(".col-1").removeClass("js-hr__horror");
                     $(".normal__text, .small__text").removeClass("js-whitetext__horror");
-                    $(".time, .intro").removeClass("js-red__area");
+                    $(".time").removeClass("js-red__area");
+                    $("#intro").attr("src", $("#intro").attr("src").replace("_horror.jpg", ".jpg"));
                     onScroll = false;
                     $("html, body").css("overflow", "auto");
                 }, 1000);
