@@ -1,8 +1,9 @@
-var index = 1;
+var index = 0;
 var width = 648;
 var opac = 0.5;
 var interval;
 var autoSlide = 5000;
+var speed = 500;
 var timer = function(){
     interval = setInterval(function() {
         $("#arrowright-js").click();
@@ -30,40 +31,41 @@ function WindowEventLoaded() {
 $(document).ready(function() {
     //click arrow left
     $("#arrowleft-js").click(function(){
-        setAnimateOpacity(".item_nav", index - 1, 1);
+        $("body").css("pointer-events", "none");
+        setAnimateOpacity(".item_nav", index, 1);
         index--;
-        if (index < 1) {
-            index = countSlide;
+        if (index < 0) {
+            index = countSlide - 1;
             moveLeft(".items", width * (countSlide - 1));
         } else {
             moveRight(".items", width);
         }  
-        setAnimateOpacity(".item_nav", index - 1, opac);
+        setAnimateOpacity(".item_nav", index, opac);
         clearInterval(interval);
         timer();
     });
     //click arrow right
     $("#arrowright-js").click(function(){
-        setAnimateOpacity(".item_nav", index - 1, 1);
+        $("body").css("pointer-events", "none");
+        setAnimateOpacity(".item_nav", index, 1);
         index++;
-        if (index > countSlide) {
-            index = 1;
+        if (index == countSlide) {
+            index = 0;
             moveRight(".items", width * (countSlide - 1));
         } else {
             moveLeft(".items", width);
         }  
-        setAnimateOpacity(".item_nav", index - 1, opac);
+        setAnimateOpacity(".item_nav", index, opac);
         clearInterval(interval);
         timer();
     });
     //click item nav
     $(".item_nav").click(function(){
-        var item = $(this).attr("id");
-        var choice = item.split("-");
-        move(index, $(this).index());
+        var item = $(this).index();
+        move(index, item);
         setAnimateOpacity(".item_nav", $(this).index(), opac);
         setAnimateOpacity(".item_nav", index, 1);
-        index = choice[1];
+        index = item;
         clearInterval(interval);
         timer();
     });
@@ -77,13 +79,15 @@ function move(indexA, indexB) {
     if (indexA == indexB) {
         return;
     } else if (indexA > indexB) {
+        $("body").css("pointer-events", "none");
         var offset = indexA - indexB;
         var distance = width * offset;
-        moveRight("#item-", distance);
+        moveRight(".items", distance);
     } else {
+        $("body").css("pointer-events", "none");
         var offset = indexB - indexA;
         var distance = width * offset;
-        moveLeft("#item-", distance);
+        moveLeft(".items", distance);
     }
 }
 /**
@@ -96,6 +100,8 @@ function moveLeft(obj, distance) {
     for (i = 0; i < countSlide; i++) {
         $(obj).eq(i).animate({
             left: "-=" + distance + "px"
+        }, speed, function() {
+            $("body").css("pointer-events", "auto");
         });
     }
 }
@@ -109,6 +115,8 @@ function moveRight(obj, distance) {
     for (i = 0; i < countSlide; i++) {
         $(obj).eq(i).animate({
             left: "+=" + distance + "px"
+        }, speed, function() {
+            $("body").css("pointer-events", "auto");
         });
     }
 }
