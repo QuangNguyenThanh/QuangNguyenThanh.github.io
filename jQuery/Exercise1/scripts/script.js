@@ -1,33 +1,37 @@
-var locate = 0;
-var delay = 1000;
+var locate = -1;
 var isPopup = false;
 $(document).ready(function(){
     //Event click in menu
     $(".about").click(function() {
         if (!isPopup) {
-            console.log($(this).index());
-            var about = $(this).attr("id");
-            var src = $(this).attr("src");
-            var index = about.split("-");
-            src = src === "images/about" + index[1] + "_mb.jpg" ?
-            "images/about" + index[1] + "_mb_hover.jpg" : "images/about" + index[1] + "_mb.jpg";
-    
-            if (locate == index[1]) {
-                $('#hidden-' + index[1]).animate( {
+            var index = $("li > .about").index($(this));
+            var src = $("li > .about").eq(index).attr("src");
+            src = src === "images/about" + (index + 1) + "_mb.jpg" ?
+            "images/about" + (index + 1) + "_mb_hover.jpg" 
+            : "images/about" + (index + 1) + "_mb.jpg";
+
+            if (locate == -1) {
+                $("li > .hidden").eq(index).animate( {
                     height: "toggle"
                 });
-                $(this).attr("src", src);
-                locate = 0;
-                return;
+                $("li > .about").eq(index).attr("src", src);
+                locate = index;
+            } else if (locate == index) {
+                $("li > .hidden").eq(index).animate( {
+                    height: "toggle"
+                });
+                $("li > .about").eq(index).attr("src", src);
+                locate = -1;
             } else {
-                var srcPre = $("#about-" + locate).attr("src");
-                srcPre = srcPre === "images/about" + locate + "_mb.jpg" ?
-                "images/about" + locate + "_mb_hover.jpg" : "images/about" + locate + "_mb.jpg";
-                $("#about-" + locate).attr("src", srcPre);
-                locate = index[1];
-                $(this).attr("src", src);
+                var srcPre = $("li > .about").eq(locate).attr("src");
+                srcPre = srcPre === "images/about" + (locate + 1) + "_mb.jpg" ?
+                "images/about" + (locate + 1) + "_mb_hover.jpg" 
+                : "images/about" + (locate + 1) + "_mb.jpg";
+                $("li > .about").eq(locate).attr("src", srcPre);
+                locate = index;
+                $("li > .about").eq(index).attr("src", src);
                 $(".hidden").hide();
-                $('#hidden-' + index[1]).animate( {
+                $("li > .hidden").eq(index).animate( {
                     height: "toggle"
                 });
             }
@@ -35,14 +39,13 @@ $(document).ready(function(){
     });
     //Event click button in content
     $(".button").click(function() {
-        var btn = $(this).attr("id");
-        var index = btn.split("-");
-        if (index[1] > 2) {
-            index[1] = 1;
+        var index = $("li > .hidden > .button").index($(this));
+        if (index > 1) {
+            index = 0;
         }
         isPopup = true;
-        $("#popup-" + index[1]).show();
-        $("#popup-" + index[1]).animate( {
+        $(".popup").eq(index).show();
+        $(".popup").eq(index).animate( {
             top: "+=190px"
         }, "slow");
     });
