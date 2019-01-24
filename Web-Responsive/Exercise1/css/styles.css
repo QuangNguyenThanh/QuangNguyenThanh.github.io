@@ -67,19 +67,68 @@ ul {
 li {
   position: relative;
   margin-bottom: 7px;
-  margin-right: 50px;
-  color: white;
+  margin-right: 40px;
+  color: black;
+  font-weight: bold;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
-li::after {
+li input {
   position: absolute;
-  right: -30px;
-  margin-left: 10px;
-  content: url("../images/img_check.png");
-  top: 2px;
+  opacity: 0;
+  cursor: pointer;
+  height: 22px;
+  width: 22px;
+  left: 50px;
+  top: 3px;
+}
+
+li label {
+  cursor: pointer;
+}
+
+.setting--color {
+  color: #008098;
+}
+
+.checkmark {
+  position: absolute;
+  cursor: pointer;
+  top: 3px;
+  left: 60px;
+  height: 20px;
+  width: 20px;
+  background-color: #fff;
+  border: 1px solid #d2d2d2;
+}
+
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.container input:checked ~ .checkmark:after {
+  display: block;
+}
+.checkmark:after {
+  left: 5px;
+  top: 1px;
+  width: 5px;
+  height: 10px;
+  border: solid #fccb00;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
 }
 
 .voiceall {
+  cursor: pointer;
   margin-top: 20px;
   margin-bottom: 15px;
 }
@@ -174,9 +223,9 @@ li::after {
 }
 
 hr {
-  border-bottom: 2px solid #95ded9;
-  width: 200px;
-  margin: 0 auto;
+  border-top: 2px solid #95ded9;
+  width: 80%;
+  margin-left: 40px;
 }
 
 .show {
@@ -198,6 +247,7 @@ hr {
 
 .sound {
   display: block;
+  cursor: pointer;
   margin-left: 2%;
 }
 
@@ -230,8 +280,19 @@ p {
   margin-top: 0;
 }
 
-.smile {
+#smile {
   margin-right: 20%;
+  background: #d8137e;
+  border-radius: 50%;
+}
+
+#sad {
+  background: #cecece;
+  border-radius: 50%;
+}
+
+#smile, #sad {
+  cursor: pointer;
 }
 
 .foot {
@@ -274,6 +335,9 @@ p {
   }
   li {
     float: left;
+  }
+  .checkmark {
+    left: 50px;
   }
   .show {
     display: inline;
