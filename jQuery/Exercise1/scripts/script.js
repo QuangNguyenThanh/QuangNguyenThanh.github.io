@@ -5,6 +5,7 @@ $(document).ready(function(){
     //Event click in menu
     $(".about").click(function() {
         if (!isPopup) {
+            console.log($(this).index());
             var about = $(this).attr("id");
             var src = $(this).attr("src");
             var index = about.split("-");

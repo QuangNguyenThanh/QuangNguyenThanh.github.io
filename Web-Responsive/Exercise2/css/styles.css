@@ -95,20 +95,17 @@ h3 {
   display: table;
 }
 
-.js-redtext__horror {
-  color: #cc0000;
+.horror-js {
+  background: black;
+  color: #990000;
 }
 
-.js-whitetext__horror {
-  color: #999;
+.horror-js .time {
+  background: #330000;
 }
 
-.js-hr__horror {
-  border-top: 1px solid #cc0000;
-}
-
-.js-red__area {
-  background-color: #330000;
+.horror-js .border__top {
+  border-top: 1px solid #990000;
 }
 
 @media only screen and (min-width: 1280px) {
