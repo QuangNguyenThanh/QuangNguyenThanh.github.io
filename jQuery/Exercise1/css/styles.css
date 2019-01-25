@@ -16,6 +16,7 @@ ul {
 .about {
     display: flex;
     margin: 0 auto;
+    cursor: pointer;
 }
 
 .hidden {
@@ -40,11 +41,16 @@ ul {
     margin: 0 auto;
 }
 
+.button {
+    cursor: pointer;
+}
+
 .image_popup {
     width: 300px;
 }
 
 .buttonclose {
     position: absolute;
+    cursor: pointer;
     top: -25px;
 }
