@@ -27,15 +27,20 @@ $(document).ready(function() {
         $(".block__right__woman").addClass("content__woman__right");
         $("#woman__right").removeClass("woman");
     });
+
+    var checkSize = false;
     $(window).resize(function() {
-        if ($(window).width() > 1280) {
+        if ($(window).width() >= 1280) {
+            checkSize = false;
             changeBackground("#smile", "#sad");
-            $("#block__left-js, #block__right-js").show();
             $(".block__right__woman").addClass("content__woman__right");
             $("#woman__right").removeClass("woman");
-        }
-        else {
-            $("#block__right-js").hide();
+            $("#block__left-js, #block__right-js").show();
+        } else {
+            if (!checkSize) {
+                checkSize = true;
+                $("#block__right-js").hide();
+            } 
         }
     });
 });
