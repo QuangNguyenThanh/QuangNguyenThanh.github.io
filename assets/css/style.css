@@ -1564,6 +1564,7 @@ section {
   color: #444444;
   background: #fafbff;
   padding: 30px;
+  min-height: 220px;
 }
 
 .contact .info-box i {
